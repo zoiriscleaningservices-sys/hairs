@@ -7,8 +7,8 @@
   <meta name="description" content="Styles by Cece — Book knotless, feed-ins, box braids, braided ponytail, retwists, and more. Mobile, AL hairstylist. $10 nonrefundable deposit required." />
   <meta name="keywords" content="Mobile Alabama hairstylist, knotless braids Mobile AL, braided ponytail Mobile, box braids Mobile AL, retwist Mobile AL" />
   <!-- Favicon / Website Logo -->
-<link rel="icon" href="https://i.ibb.co/3970ytrm/Chat-GPT-Image-Sep-21-2025-07-07-28-AM.png" type="image/png">
-<link rel="apple-touch-icon" href="https://i.ibb.co/3970ytrm/Chat-GPT-Image-Sep-21-2025-07-07-28-AM.png">
+<link rel="icon" href="https://media.discordapp.net/attachments/1358917233065332889/1419432285383692470/ChatGPT_Image_Sep_21_2025_07_07_28_AM.png?ex=68d3b714&is=68d26594&hm=cf5d353682c043d0e685e211c2f72f46f6dfb6af60e1fa2e189136f462632c60&=&format=webp&quality=lossless&width=544&height=544" type="image/png">
+<link rel="apple-touch-icon" href="https://media.discordapp.net/attachments/1358917233065332889/1419432285383692470/ChatGPT_Image_Sep_21_2025_07_07_28_AM.png?ex=68d3b714&is=68d26594&hm=cf5d353682c043d0e685e211c2f72f46f6dfb6af60e1fa2e189136f462632c60&=&format=webp&quality=lossless&width=544&height=544">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -100,7 +100,7 @@
       <!-- Logo -->
       <div class="flex items-center space-x-3">
         <div class="w-16 h-16 rounded-md overflow-hidden">
-          <img src="https://i.ibb.co/3970ytrm/Chat-GPT-Image-Sep-21-2025-07-07-28-AM.png" alt="Styles by Cece Logo" class="w-full h-full object-cover">
+          <img src="https://media.discordapp.net/attachments/1358917233065332889/1419432285383692470/ChatGPT_Image_Sep_21_2025_07_07_28_AM.png?ex=68d3b714&is=68d26594&hm=cf5d353682c043d0e685e211c2f72f46f6dfb6af60e1fa2e189136f462632c60&=&format=webp&quality=lossless&width=544&height=544" alt="Styles by Cece Logo" class="w-full h-full object-cover">
         </div>
         <div>
           <div class="font-bold text-lg">Styles by Cece</div>
@@ -177,7 +177,7 @@
     <p class="text-gray-300">Hi, I'm Cece — a professional hairstylist based in Mobile, AL. I specialize in braid artistry, knotless, feed-ins, protective styles, and men’s grooming. I focus on precision, longevity, and a comfortable client experience.</p>
   </div>
   <div class="flex-1 overflow-hidden rounded-xl w-full">
-    <img src="https://i.ibb.co/HDTQBZZT/Whats-App-Image-2025-09-21-at-08-23-41-a558c8bb-Picsart-Background-Remover.png" 
+    <img src="https://media.discordapp.net/attachments/1358917233065332889/1419432286155309157/WhatsApp_Image_2025-09-21_at_082341_a558c8bb-Picsart-BackgroundRemover.jpg?ex=68d3b714&is=68d26594&hm=e5af419f3f648bbe24ec2ead87449a28ab7892e725bc4b2d554e387b94140422&=&format=webp&width=436&height=544" 
          alt="Cece" 
          class="w-full h-full object-cover md:min-h-[300px] md:h-auto">
   </div>
@@ -305,7 +305,8 @@
 
 
 
- <!-- BOOKING -->
+
+<!-- BOOKING -->
 <section id="booking" class="max-w-6xl mx-auto px-4 py-12">
   <h2 class="text-3xl font-bold mb-4">Book an Appointment</h2>
   <p class="text-gray-300 mb-6">
@@ -325,7 +326,7 @@
       <ol class="text-gray-300 pl-4 list-decimal space-y-1 mb-6">
         <li>Choose your service and preferred date/time.</li>
         <li>Submit the booking request — we’ll confirm or propose alternate times.</li>
-        <li>Pay the $10 deposit to secure the booking (payment link shown on confirmation).</li>
+        <li>Pay the $10 deposit to secure the booking (redirected automatically).</li>
       </ol>
 
       <!-- Policies Added -->
@@ -338,12 +339,8 @@
       </ul>
     </div>
 
-
-
-
     <!-- Right form -->
     <div>
-      <!-- Confirmation message container -->
       <div id="bookingMessage" class="hidden mb-4 p-3 rounded text-white font-semibold"></div>
 
       <form id="bookingForm" action="https://formspree.io/f/xgvnwajw" method="POST" class="space-y-4">
@@ -379,7 +376,7 @@
   const message = document.getElementById('bookingMessage');
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault(); 
     const formData = new FormData(form);
 
     try {
@@ -390,10 +387,16 @@
       });
 
       if (response.ok) {
-        message.textContent = '✅ Booking submitted successfully! Check your email for confirmation.';
+        // ✅ Booking saved — now auto-redirect to payment
+        message.textContent = '✅ Booking submitted! Redirecting you to secure $10 deposit...';
         message.className = 'mb-4 p-3 rounded bg-green-600 text-white font-semibold';
         message.classList.remove('hidden');
         form.reset();
+
+        // 🔹 Change this to your real PayPal or Cash App link:
+        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD";
+        // OR for Cash App: 
+         window.location.href = "https://cash.app/$nastyzia18/10";
       } else {
         const data = await response.json();
         message.textContent = data.errors ? data.errors.map(err => err.message).join(", ") : "⚠️ There was a problem submitting your booking.";
@@ -406,13 +409,10 @@
       message.classList.remove('hidden');
       console.error(error);
     }
-
-    // hide message after 5 seconds
-    setTimeout(() => {
-      message.classList.add('hidden');
-    }, 5000);
   });
 </script>
+
+
 
 
 
