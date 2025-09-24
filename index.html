@@ -307,110 +307,261 @@
 
 
 <!-- BOOKING -->
-<section id="booking" class="max-w-6xl mx-auto px-4 py-12">
-  <h2 class="text-3xl font-bold mb-4">Book an Appointment</h2>
-  <p class="text-gray-300 mb-6">
-    Complete the booking form below. A $10 nonrefundable deposit is required to secure your appointment.
-  </p>
-  
-  <div class="grid md:grid-cols-2 gap-8">
-    <!-- Left info -->
-    <div>
-      <div class="p-4 bg-gradient-to-br from-purple-900 to-pink-700 rounded-xl mb-6">
-        <p class="text-sm text-gray-100">
-          <strong>Important:</strong> $10 nonrefundable deposit required. Please arrive with hair blowed out. Contact us 24 hours in advance for changes.
-        </p>
-      </div>
+        <section id="booking" class="max-w-6xl mx-auto px-4 py-12 bg-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-800 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl font-bold mb-6 text-center">Book an Appointment</h2>
+            <p class="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
+                Complete the booking form below. A $10 nonrefundable deposit is required to secure your appointment.
+            </p>
 
-      <h3 class="font-bold mb-2">How it works</h3>
-      <ol class="text-gray-300 pl-4 list-decimal space-y-1 mb-6">
-        <li>Choose your service and preferred date/time.</li>
-        <li>Submit the booking request — we’ll confirm or propose alternate times.</li>
-        <li>Pay the $10 deposit to secure the booking (redirected automatically).</li>
-      </ol>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Left info -->
+                <div class="space-y-6">
+                    <div class="p-6 bg-gradient-to-br from-purple-900 to-pink-700 rounded-xl mb-6 border border-purple-500/30">
+                        <div class="flex items-start">
+                            <i data-feather="alert-circle" class="text-yellow-300 mr-3 mt-1"></i>
+                            <p class="text-sm text-gray-100">
+                                <strong>Important:</strong> $10 nonrefundable deposit required. Please arrive with hair blowed out. Contact us 24 hours in advance for changes.
+                            </p>
+                        </div>
+                    </div>
 
-      <!-- Policies Added -->
-      <h3 class="font-bold mb-2">Additional Policies</h3>
-      <ul class="text-gray-300 pl-4 list-disc space-y-1">
-        <li><strong>Cancellation Fee:</strong> $30 (must cancel 24 hours in advance).</li>
-        <li><strong>Grace Period:</strong> 15 minutes allowed — after that, $10 fee applies.</li>
-        <li><strong>Squeeze-ins:</strong> Additional $20 fee.</li>
-        <li><strong>Wash & Blowout:</strong> +$25 service add-on.</li>
-      </ul>
+                    <div class="policy-card p-5 rounded-lg">
+                        <h3 class="font-bold mb-3 text-lg flex items-center">
+                            <i data-feather="list" class="mr-2 text-purple-400"></i> How it works
+                        </h3>
+                        <ol class="text-gray-300 pl-4 list-decimal space-y-2">
+                            <li>Choose your service and preferred date/time.</li>
+                            <li>Submit the booking request — we'll confirm or propose alternate times.</li>
+                            <li>Pay the $10 deposit to secure the booking (choose payment method below).</li>
+                        </ol>
+                    </div>
+
+                    <div class="policy-card p-5 rounded-lg">
+                        <h3 class="font-bold mb-3 text-lg flex items-center">
+                            <i data-feather="file-text" class="mr-2 text-purple-400"></i> Additional Policies
+                        </h3>
+                        <ul class="text-gray-300 pl-4 list-disc space-y-2">
+                            <li><strong>Cancellation Fee:</strong> $30 (must cancel 24 hours in advance).</li>
+                            <li><strong>Grace Period:</strong> 15 minutes allowed — after that, $10 fee applies.</li>
+                            <li><strong>Squeeze-ins:</strong> Additional $20 fee.</li>
+                            <li><strong>Wash & Blowout:</strong> +$25 service add-on.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black/40 p-5 rounded-lg border border-gray-700">
+                        <h3 class="font-bold mb-3 text-lg flex items-center">
+                            <i data-feather="clock" class="mr-2 text-purple-400"></i> Business Hours
+                        </h3>
+                        <ul class="text-gray-300 space-y-2">
+                            <li class="flex justify-between"><span>Monday - Friday:</span> <span>9:00 AM - 7:00 PM</span></li>
+                            <li class="flex justify-between"><span>Saturday:</span> <span>9:00 AM - 5:00 PM</span></li>
+                            <li class="flex justify-between"><span>Sunday:</span> <span>Open</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right form -->
+                <div>
+                    <div id="bookingMessage" class="hidden mb-6 p-4 rounded text-white font-semibold"></div>
+
+                    <form id="bookingForm" action="https://formspree.io/f/xgvnwajw" method="POST" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                            <input type="text" name="name" placeholder="Your full name" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                            <input type="email" name="email" placeholder="your.email@example.com" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="(123) 456-7890" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Select Service</label>
+                            <select name="service" id="serviceSelect" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+                                <option value="">Choose a service</option>
+                                <option>Large Knotless - $90</option>
+                                <option>Medium Knotless - $120</option>
+                                <option>Small Knotless - $150</option>
+                                <option>XS Knotless - $185</option>
+                                <option>Two Braids - $35</option>
+                                <option>4 Criss Cross - $55</option>
+                                <option>6 Feed-ins - $60</option>
+                                <option>Braided Ponytail - $65</option>
+                                <option>12 Feed-ins - $95</option>
+                                <option>Box Braids - $130</option>
+                                <option>Retwist - $55</option>
+                                <option>Retwist + Wash - $65</option>
+                                <option>Scalp Braids - $50</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Preferred Date & Time</label>
+                            <input type="datetime-local" name="date" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>
+                            <textarea name="notes" placeholder="Any special requests or information we should know?" rows="4" class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full py-4 rounded-lg text-lg font-semibold flex items-center justify-center">
+                            <i data-feather="calendar" class="mr-2"></i> Submit Booking Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-4xl mx-auto mt-20 px-4" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-gray-900/30 p-6 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i data-feather="help-circle" class="text-purple-400 mr-2"></i> How long will my appointment take?
+                    </h3>
+                    <p class="text-gray-300">Appointment duration varies by service. Small braids can take 2-3 hours, while more complex styles may take 4-6 hours. We'll provide a time estimate when we confirm your booking.</p>
+                </div>
+                
+                <div class="bg-gray-900/30 p-6 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i data-feather="help-circle" class="text-purple-400 mr-2"></i> What if I need to reschedule?
+                    </h3>
+                    <p class="text-gray-300">We understand that life happens! Please contact us at least 24 hours in advance to reschedule without incurring a cancellation fee. The $10 deposit will be applied to your new appointment.</p>
+                </div>
+                
+                <div class="bg-gray-900/30 p-6 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-lg mb-2 flex items-center">
+                        <i data-feather="help-circle" class="text-purple-400 mr-2"></i> What hair products should I bring?
+                    </h3>
+                    <p class="text-gray-300">We provide premium braiding hair and products. However, if you have specific hair or scalp sensitivities, feel free to bring your preferred products. Please arrive with clean, dry hair.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50 p-4">
+        <div class="bg-gray-900 rounded-2xl shadow-2xl p-8 w-full max-w-md text-center relative border border-purple-500/30 modal-content">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors">
+                <i data-feather="x"></i>
+            </button>
+            <div class="mb-6">
+                <i data-feather="credit-card" class="text-purple-400 w-12 h-12 mx-auto mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Secure Your Spot</h3>
+                <p class="text-gray-300">Please complete your $10 deposit using one of the options below:</p>
+            </div>
+            <div class="flex flex-col gap-4 mb-4">
+                <a id="paypalButton" href="#" target="_blank" class="px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow font-semibold flex items-center justify-center transition-colors">
+                    <i data-feather="dollar-sign" class="mr-2"></i> Pay with PayPal
+                </a>
+                <a id="cashAppButton" href="#" target="_blank" class="px-6 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow font-semibold flex items-center justify-center transition-colors">
+                    <i data-feather="dollar-sign" class="mr-2"></i> Pay with Cash App
+                </a>
+            </div>
+            <p class="text-sm text-gray-400">Your deposit will be applied to your total service cost.</p>
+        </div>
     </div>
 
-    <!-- Right form -->
-    <div>
-      <div id="bookingMessage" class="hidden mb-4 p-3 rounded text-white font-semibold"></div>
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true
+        });
+        
+        // Initialize feather icons
+        feather.replace();
+        
+        // Booking form handling
+        const form = document.getElementById('bookingForm');
+        const message = document.getElementById('bookingMessage');
+        const paymentModal = document.getElementById('paymentModal');
+        const paypalButton = document.getElementById('paypalButton');
+        const cashAppButton = document.getElementById('cashAppButton');
+        const closeModal = document.getElementById('closeModal');
 
-      <form id="bookingForm" action="https://formspree.io/f/xgvnwajw" method="POST" class="space-y-4">
-        <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded bg-black/40 border border-gray-700">
-        <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded bg-black/40 border border-gray-700">
-        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 rounded bg-black/40 border border-gray-700">
-        <select name="service" id="serviceSelect" required class="w-full p-3 rounded bg-black/40 border border-gray-700">
-          <option value="">Select a service</option>
-          <option>Large Knotless - $90</option>
-          <option>Medium Knotless - $120</option>
-          <option>Small Knotless - $150</option>
-          <option>XS Knotless - $185</option>
-          <option>Two Braids - $35</option>
-          <option>4 Criss Cross - $55</option>
-          <option>6 Feed-ins - $60</option>
-          <option>Braided Ponytail - $65</option>
-          <option>12 Feed-ins - $95</option>
-          <option>Box Braids - $130</option>
-          <option>Retwist - $55</option>
-          <option>Retwist + Wash - $65</option>
-          <option>Scalp Braids - $50</option>
-        </select>
-        <input type="datetime-local" name="date" required class="w-full p-3 rounded bg-black/40 border border-gray-700">
-        <textarea name="notes" placeholder="Additional Notes" class="w-full p-3 rounded bg-black/40 border border-gray-700"></textarea>
-        <button type="submit" class="btn-primary w-full">Submit Booking</button>
-      </form>
-    </div>
-  </div>
-</section>
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            // Show loading state
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i data-feather="loader" class="animate-spin mr-2"></i> Processing...';
+            feather.replace();
 
-<script>
-  const form = document.getElementById('bookingForm');
-  const message = document.getElementById('bookingMessage');
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); 
-    const formData = new FormData(form);
+                if (response.ok) {
+                    message.textContent = '✅ Booking submitted successfully! Please complete your $10 deposit to secure your appointment.';
+                    message.className = 'mb-6 p-4 rounded-lg bg-green-600/90 text-white font-semibold';
+                    message.classList.remove('hidden');
+                    form.reset();
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
+                    // Set payment URLs (replace with actual payment links)
+                    paypalButton.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD";
+                    cashAppButton.href = "https://cash.app/$nastyzia18/10";
 
-      if (response.ok) {
-        // ✅ Booking saved — now auto-redirect to payment
-        message.textContent = '✅ Booking submitted! Redirecting you to secure $10 deposit...';
-        message.className = 'mb-4 p-3 rounded bg-green-600 text-white font-semibold';
-        message.classList.remove('hidden');
-        form.reset();
+                    // Show modal
+                    paymentModal.classList.remove('hidden');
+                } else {
+                    const data = await response.json();
+                    message.textContent = data.errors ? data.errors.map(err => err.message).join(", ") : "⚠️ There was a problem submitting your booking. Please try again.";
+                    message.className = 'mb-6 p-4 rounded-lg bg-red-600/90 text-white font-semibold';
+                    message.classList.remove('hidden');
+                }
+            } catch (error) {
+                message.textContent = '⚠️ There was an error submitting your booking. Please try again later.';
+                message.className = 'mb-6 p-4 rounded-lg bg-red-600/90 text-white font-semibold';
+                message.classList.remove('hidden');
+                console.error(error);
+            } finally {
+                // Reset button text
+                submitBtn.innerHTML = originalText;
+                feather.replace();
+            }
+        });
 
-        // 🔹 Change this to your real PayPal or Cash App link:
-        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD";
-        // OR for Cash App: 
-         window.location.href = "https://cash.app/$nastyzia18/10";
-      } else {
-        const data = await response.json();
-        message.textContent = data.errors ? data.errors.map(err => err.message).join(", ") : "⚠️ There was a problem submitting your booking.";
-        message.className = 'mb-4 p-3 rounded bg-red-600 text-white font-semibold';
-        message.classList.remove('hidden');
-      }
-    } catch (error) {
-      message.textContent = '⚠️ There was an error submitting your booking. Please try again later.';
-      message.className = 'mb-4 p-3 rounded bg-red-600 text-white font-semibold';
-      message.classList.remove('hidden');
-      console.error(error);
-    }
-  });
-</script>
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            paymentModal.classList.add('hidden');
+        });
+
+        // Click outside modal to close
+        window.addEventListener('click', (e) => {
+            if (e.target === paymentModal) paymentModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
