@@ -3,16 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styles by Cece | Mobile, Alabama's #1 Hairstylist</title>
-  <meta name="description" content="Styles by Cece — Book knotless, feed-ins, box braids, braided ponytail, retwists, and more. Mobile, AL hairstylist. $10 nonrefundable deposit required." />
-  <meta name="keywords" content="Mobile Alabama hairstylist, knotless braids Mobile AL, braided ponytail Mobile, box braids Mobile AL, retwist Mobile AL" />
+  <title>Best Hairstylist in Mobile, Alabama | Braids, Locs & Natural Hair by Cece</title>
+  <meta name="description" content="Looking for the best hairstylist in Mobile, Alabama? Styles by Cece specializes in flawless knotless braids, feed-ins, box braids, retwists, and men's grooming. Book today!" />
+  <meta name="keywords" content="Mobile Alabama hairstylist, best hairstylist Mobile AL, knotless braids Mobile AL, braided ponytail Mobile, box braids Mobile AL, retwist Mobile AL, loctician Mobile AL, natural hair Mobile AL, men's grooming Mobile AL" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stylesbycece.com/">
+  <meta property="og:title" content="Best Hairstylist in Mobile, Alabama | Styles by Cece">
+  <meta property="og:description" content="Looking for the best hairstylist in Mobile, Alabama? Styles by Cece specializes in flawless knotless braids, feed-ins, box braids, retwists, and men's grooming.">
+  <meta property="og:image" content="https://imgur.com/cvQ7w3A.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://stylesbycece.com/">
+  <meta property="twitter:title" content="Best Hairstylist in Mobile, Alabama | Styles by Cece">
+  <meta property="twitter:description" content="Looking for the best hairstylist in Mobile, Alabama? Styles by Cece specializes in flawless knotless braids, feed-ins, box braids, retwists, and men's grooming.">
+  <meta property="twitter:image" content="https://imgur.com/cvQ7w3A.png">
+
+  <!-- Local Geo Tags -->
+  <meta name="geo.region" content="US-AL">
+  <meta name="geo.placename" content="Mobile">
+  <meta name="geo.position" content="30.6954;-88.0399">
+  <meta name="ICBM" content="30.6954, -88.0399">
+
+  <!-- Local Business Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Styles by Cece",
+    "image": "https://imgur.com/cvQ7w3A.png",
+    "@id": "https://stylesbycece.com/",
+    "url": "https://stylesbycece.com/",
+    "telephone": "+12515458911",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Downtown Mobile",
+      "addressLocality": "Mobile",
+      "addressRegion": "AL",
+      "postalCode": "36602",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.6954,
+      "longitude": -88.0399
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://instagram.com/cece_styles__",
+      "https://tiktok.com/@_mosthated_cece",
+      "https://www.facebook.com/cecetolit"
+    ],
+    "priceRange": "$$",
+    "description": "Mobile, Alabama's premier hairstylist specializing in knotless braids, protective styling, and men's grooming."
+  }
+  </script>
   <!-- Favicon / Website Logo -->
 <link rel="icon" href="https://imgur.com/O1pyXwE.png" type="image/png">
 <link rel="apple-touch-icon" href="https://imgur.com/O1pyXwE.png">
 <meta name="theme-color" content="#ffffff">
-
-
-
 
   
   <!-- Tailwind CSS -->
@@ -45,6 +115,7 @@
             70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
             100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
         }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: radial-gradient(circle at 10% 10%, rgba(123,47,247,0.1), transparent),
@@ -109,13 +180,13 @@
         </div>
       </div>
       <!-- Nav -->
-      <nav class="hidden md:flex items-center space-x-6">
-        <a href="#about" class="hover:text-purple-300">About</a>
-        <a href="#services" class="hover:text-purple-300">Services</a>
+      <nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-6">
+        <a href="#about" class="hover:text-purple-300" title="About Mobile AL Hairstylist Cece">About</a>
+        <a href="#services" class="hover:text-purple-300" title="Braiding & Loc Services in Mobile AL">Services</a>
         <a href="#gallery" class="hover:text-purple-300">Gallery</a>
         <a href="#booking" class="hover:text-purple-300">Booking</a>
         <a href="#contact" class="hover:text-purple-300">Contact</a>
-        <a href="#booking" class="btn-primary">Book Now</a>
+        <a href="#booking" class="btn-primary" aria-label="Book your knotless braids appointment in Mobile, Alabama">Book Now</a>
       </nav>
       <!-- Mobile Menu Button -->
       <button id="menu-btn" class="md:hidden text-white">
@@ -124,12 +195,12 @@
     </div>
     <!-- Mobile Menu -->
     <div id="mobile-nav" class="hidden md:hidden flex flex-col items-center space-y-3 mt-4">
-      <a href="#about" class="hover:text-purple-300">About</a>
-      <a href="#services" class="hover:text-purple-300">Services</a>
+      <a href="#about" class="hover:text-purple-300" title="About Mobile AL Hairstylist Cece">About</a>
+      <a href="#services" class="hover:text-purple-300" title="Braiding & Loc Services in Mobile AL">Services</a>
       <a href="#gallery" class="hover:text-purple-300">Gallery</a>
       <a href="#booking" class="hover:text-purple-300">Booking</a>
       <a href="#contact" class="hover:text-purple-300">Contact</a>
-      <a href="#booking" class="btn-primary">Book Now</a>
+      <a href="#booking" class="btn-primary" aria-label="Book your knotless braids appointment in Mobile, Alabama">Book Now</a>
     </div>
   </header>
 
@@ -137,7 +208,7 @@
   <section class="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-8">
     <div class="flex-1">
       <div class="mb-4 inline-block px-4 py-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 font-semibold text-white">Mobile, Alabama • Luxury Hairstylist</div>
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Bringing Styles to Life</h1>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4"><span class="sr-only">Top Rated Hairstylist in Mobile, Alabama - </span>Bringing Styles to Life</h1>
       <p class="mb-6 text-gray-300">Mobile's #1 hairstylist — knotless, feed-ins, box braids, braided ponytails, natural hair and men’s grooming with professional service and stunning results.</p>
       <div class="flex flex-wrap gap-3">
         <a href="#booking" class="btn-primary" onclick="scrollToBooking()">Book Your Appointment Today</a>
@@ -150,16 +221,17 @@
         <select id="quickService" class="w-full p-2 rounded text-black mb-2">
           <option>Large Knotless - $90</option>
           <option>Medium Knotless - $120</option>
-          <option>Small Knotless - $150</option>
-          <option>XS Knotless - $185</option>
+          <option>Small Knotless - $160</option>
+          <option>XS Knotless - $200</option>
           <option>Two Braids - $35</option>
           <option>4 Criss Cross - $55</option>
           <option>6 Feed-ins - $60</option>
-          <option>Braided Ponytail - $75</option>
+          <option>Braided Ponytail - $85</option>
+          <option>Kids Ponytail - $65</option>
           <option>12 Feed-ins - $95</option>
           <option>Box Braids - $130</option>
-          <option>Retwist - $55</option>
-          <option>Retwist + Wash - $70</option>
+          <option>Retwist - $60</option>
+          <option>Retwist + Wash - $75</option>
           <option>Scalp Braids - $50</option>
         </select>
         <button class="btn-primary w-full" onclick="setServiceFromQuick()">Book Now</button>
@@ -174,12 +246,12 @@
 <!-- ABOUT -->
 <section id="about" class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center">
   <div class="flex-1 min-w-[260px]">
-    <h2 class="text-2xl font-bold mb-2">Meet Cece</h2>
+    <h2 class="text-2xl font-bold mb-2"><span class="sr-only">Professional Braider in Mobile, AL - </span>Meet Cece</h2>
     <p class="text-gray-300">Hi, I'm Cece — a professional hairstylist based in Mobile, AL. I specialize in braid artistry, knotless, feed-ins, protective styles, and men’s grooming. I focus on precision, longevity, and a comfortable client experience.</p>
   </div>
   <div class="flex-1 overflow-hidden rounded-xl w-full">
     <img src="https://imgur.com/cvQ7w3A.png" 
-         alt="Cece" 
+         alt="Cece - Professional Hairstylist in Mobile, Alabama" 
          class="w-full h-full object-cover md:min-h-[300px] md:h-auto">
   </div>
 </section>
@@ -192,23 +264,24 @@
 
   <!-- SERVICES -->
   <section id="services" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold mb-4">Services & Pricing</h2>
+    <h2 class="text-3xl font-bold mb-4"><span class="sr-only">Mobile Alabama Braids and Locs </span>Services & Pricing</h2>
     <p class="text-gray-300 mb-6">Click <em>Book Now</em> beside any service to jump to booking.</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Service cards -->
       <div class="card"><h3 class="font-bold mb-1">Large Knotless</h3><div class="font-semibold mb-2">$90</div><button class="btn-primary w-full" onclick="fillService('Large Knotless - $90')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">Medium Knotless</h3><div class="font-semibold mb-2">$120</div><button class="btn-primary w-full" onclick="fillService('Medium Knotless - $120')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Small Knotless</h3><div class="font-semibold mb-2">$150</div><button class="btn-primary w-full" onclick="fillService('Small Knotless - $150')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">XS Knotless</h3><div class="font-semibold mb-2">$185</div><button class="btn-primary w-full" onclick="fillService('XS Knotless - $185')">Book Now</button></div>
+      <div class="card"><h3 class="font-bold mb-1">Small Knotless</h3><div class="font-semibold mb-2">$160</div><button class="btn-primary w-full" onclick="fillService('Small Knotless - $160')">Book Now</button></div>
+      <div class="card"><h3 class="font-bold mb-1">XS Knotless</h3><div class="font-semibold mb-2">$200</div><button class="btn-primary w-full" onclick="fillService('XS Knotless - $200')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">Two Braids</h3><div class="font-semibold mb-2">$35</div><button class="btn-primary w-full" onclick="fillService('Two Braids - $35')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">4 Criss Cross</h3><div class="font-semibold mb-2">$55</div><button class="btn-primary w-full" onclick="fillService('4 Criss Cross - $55')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">6 Feed-ins</h3><div class="font-semibold mb-2">$60</div><button class="btn-primary w-full" onclick="fillService('6 Feed-ins - $60')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Braided Ponytail</h3><div class="font-semibold mb-2">$75</div><button class="btn-primary w-full" onclick="fillService('Braided Ponytail - $75')">Book Now</button></div>
+      <div class="card"><h3 class="font-bold mb-1">Braided Ponytail</h3><div class="font-semibold mb-2">$85</div><button class="btn-primary w-full" onclick="fillService('Braided Ponytail - $85')">Book Now</button></div>
+      <div class="card"><h3 class="font-bold mb-1">Kids Ponytail</h3><div class="font-semibold mb-2">$65</div><button class="btn-primary w-full" onclick="fillService('Kids Ponytail - $65')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">12 Feed-ins</h3><div class="font-semibold mb-2">$95</div><button class="btn-primary w-full" onclick="fillService('12 Feed-ins - $95')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">Box Braids</h3><div class="font-semibold mb-2">$130</div><button class="btn-primary w-full" onclick="fillService('Box Braids - $130')">Book Now</button></div>
       <!-- Men styles -->
-      <div class="card"><h3 class="font-bold mb-1">Retwist</h3><div class="font-semibold mb-2">$55</div><button class="btn-primary w-full" onclick="fillService('Retwist - $55')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Retwist + Wash</h3><div class="font-semibold mb-2">$70</div><button class="btn-primary w-full" onclick="fillService('Retwist + Wash - $70')">Book Now</button></div>
+      <div class="card"><h3 class="font-bold mb-1">Retwist</h3><div class="font-semibold mb-2">$60</div><button class="btn-primary w-full" onclick="fillService('Retwist - $60')">Book Now</button></div>
+      <div class="card"><h3 class="font-bold mb-1">Retwist + Wash</h3><div class="font-semibold mb-2">$75</div><button class="btn-primary w-full" onclick="fillService('Retwist + Wash - $75')">Book Now</button></div>
       <div class="card"><h3 class="font-bold mb-1">Scalp Braids</h3><div class="font-semibold mb-2">$50</div><button class="btn-primary w-full" onclick="fillService('Scalp Braids - $50')">Book Now</button></div>
     </div>
   </section>
@@ -218,7 +291,7 @@
 
 <!-- GALLERY -->
 <section id="gallery" class="max-w-6xl mx-auto px-4 py-12">
-  <h2 class="text-3xl font-bold mb-4">Gallery</h2>
+  <h2 class="text-3xl font-bold mb-4"><span class="sr-only">Hairstyle </span>Gallery<span class="sr-only"> - Mobile AL</span></h2>
   <p class="text-gray-300 mb-6">
     Real client looks — follow on Instagram for live updates.
   </p>
@@ -230,37 +303,37 @@
       
       <!-- 18 images -->
       <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/MDWS7t6.png"alt="Image 1" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/MDWS7t6.png"alt="Medium knotless braids by top Mobile AL hairstylist" class="rounded-xl w-full h-80 object-cover" />
       </div>
       <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/pXh352F.png " alt="Image 2" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/pXh352F.png " alt="Men\'s retwist and line up in Mobile Alabama" class="rounded-xl w-full h-80 object-cover" />
       </div>
       <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/mxkKLdC.png" alt="Image 3" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/mxkKLdC.png" alt="Clean precision fade and twists in Mobile AL" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/37h5f5E.png" alt="Image 4" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/37h5f5E.png" alt="Classic two braids protective style by Cece" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/r43QgSq.png" alt="Image 5" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/r43QgSq.png" alt="Creative criss cross men\'s braids in Mobile" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/s5CNFoJ.png" alt="Image 6" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/s5CNFoJ.png" alt="Box braids extensions mobile alabama hair salon" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/vDBg8uD.png" alt="Image 7" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/vDBg8uD.png" alt="Kids braided ponytail look in Mobile Alabama" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/HnjzujM.png" alt="Image 8" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/HnjzujM.png" alt="Neat stitch braids and scalp care by expert Mobile stylist" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/9aEgRhZ.png" alt="Image 9" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/9aEgRhZ.png" alt="Flawless knotless parts by Cece Mobile AL" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/cPZ9fnI.png" alt="Image 10" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/cPZ9fnI.png" alt="Braided updo styling Mobile Alabama" class="rounded-xl w-full h-80 object-cover" />
       </div>
             <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/ILCoqVM.png" alt="Image 11" class="rounded-xl w-full h-80 object-cover" />
+        <img src="https://imgur.com/ILCoqVM.png" alt="Local Mobile AL braid artistry and natural hair care" class="rounded-xl w-full h-80 object-cover" />
       </div>
 
       <!-- keep adding up to 18 -->
@@ -387,16 +460,17 @@
             <option value="">Choose a service</option>
             <option>Large Knotless - $90</option>
             <option>Medium Knotless - $120</option>
-            <option>Small Knotless - $150</option>
-            <option>XS Knotless - $185</option>
+            <option>Small Knotless - $160</option>
+            <option>XS Knotless - $200</option>
             <option>Two Braids - $35</option>
             <option>4 Criss Cross - $55</option>
             <option>6 Feed-ins - $60</option>
-            <option>Braided Ponytail - $75</option>
+            <option>Braided Ponytail - $85</option>
+            <option>Kids Ponytail - $65</option>
             <option>12 Feed-ins - $95</option>
             <option>Box Braids - $130</option>
-            <option>Retwist - $55</option>
-            <option>Retwist + Wash - $70</option>
+            <option>Retwist - $60</option>
+            <option>Retwist + Wash - $75</option>
             <option>Scalp Braids - $50</option>
           </select>
         </div>
@@ -458,6 +532,34 @@
 
 
         <!-- FAQ Section -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "How long will my appointment take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Appointment duration varies by service. Small braids can take 2-3 hours, while more complex styles may take 4-6 hours. We'll provide a time estimate when we confirm your booking."
+            }
+          },{
+            "@type": "Question",
+            "name": "What if I need to reschedule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We understand that life happens! Please contact us at least 24 hours in advance to reschedule without incurring a cancellation fee. The $10 deposit will be applied to your new appointment."
+            }
+          },{
+            "@type": "Question",
+            "name": "What hair products should I bring?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide premium braiding hair and products. However, if you have specific hair or scalp sensitivities, feel free to bring your preferred products. Please arrive with clean, dry hair."
+            }
+          }]
+        }
+        </script>
         <section class="max-w-4xl mx-auto mt-20 px-4" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
             <div class="space-y-4">
@@ -593,19 +695,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- CONTACT -->
 <section id="contact" class="max-w-6xl mx-auto px-4 py-12 text-center">
   <h2 class="text-3xl font-bold mb-4">Contact & Follow</h2>
@@ -667,6 +756,16 @@
 
 
   <p class="text-gray-500 text-sm">© 2025 Styles by Cece | Mobile, Alabama</p>
+  <address class="sr-only" itemscope itemtype="http://schema.org/LocalBusiness">
+    <span itemprop="name">Styles by Cece</span>
+    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">Downtown Mobile</span>,
+      <span itemprop="addressLocality">Mobile</span>,
+      <span itemprop="addressRegion">AL</span>
+      <span itemprop="postalCode">36602</span>
+    </span>
+    <span itemprop="telephone">+12515458911</span>
+  </address>
 </section>
 
 
@@ -701,7 +800,7 @@
     }
   </script>
       <!-- Sticky Book Button -->
-    <a href="#booking" class="btn-primary sticky-book  to-primary-pink text-white px-6 py-3 rounded-full">
+    <a href="#booking" class="btn-primary sticky-book  to-primary-pink text-white px-6 py-3 rounded-full" aria-label="Book a Local Mobile Alabama Hair Appointment Now">
         Book Now
     </a>
 
