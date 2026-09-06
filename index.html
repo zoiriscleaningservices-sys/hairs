@@ -903,64 +903,126 @@
         </h3>
         <p class="text-gray-300 text-sm leading-relaxed">For Braid Down ($20), please arrive with clean, washed and blown out hair. For Take Down ($40-$80), we gently unravel your braids, cleanse the scalp, and detangle your natural hair safely.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- AUTOMATED SMS CONFIRMATION & PAYMENT MODAL -->
+    </div>  <!-- AUTOMATED SMS CONFIRMATION & PAYMENT MODAL -->
   <div id="smsConfirmationModal" class="fixed inset-0 bg-black/85 flex items-center justify-center hidden z-50 p-4 backdrop-blur-md">
-    <div class="bg-slate-900 rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-lg text-left relative border border-purple-500/40 modal-content overflow-hidden">
+    <div class="bg-slate-900 rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-lg text-left relative border border-purple-500/40 modal-content overflow-hidden max-h-[92vh] overflow-y-auto">
       
-      <button id="closeSmsModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors p-2 bg-white/10 rounded-full">
+      <button id="closeSmsModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors p-2 bg-white/10 rounded-full z-10">
         <i data-feather="x" class="w-5 h-5"></i>
       </button>
 
+      <!-- Modal Title Header -->
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 rounded-full bg-purple-600/30 border border-purple-500/50 flex items-center justify-center text-purple-300">
-          <i data-feather="message-square" class="w-5 h-5 text-pink-400"></i>
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white shadow-lg shrink-0">
+          <i data-feather="check-circle" class="w-6 h-6"></i>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-white">Booking & Twilio SMS Confirmation</h3>
-          <p class="text-xs text-green-400 flex items-center gap-1 font-semibold">
-            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Twilio Cloud SMS Dispatched
+          <h3 class="text-xl font-extrabold text-white leading-tight">Booking Request Received!</h3>
+          <p class="text-xs text-purple-300 font-semibold mt-0.5">
+            Pay <span class="text-pink-400 font-bold">$10 Deposit</span> to lock in your appointment slot
           </p>
         </div>
       </div>
 
-      <!-- Smartphone Message Bubble Simulation -->
-      <div class="phone-mockup p-4 mb-6 space-y-3">
-        <div class="flex items-center justify-between text-[11px] text-gray-400 border-b border-gray-800 pb-2">
-          <span>From: <strong class="text-white">+1 (737) 258-3742</strong></span>
-          <span>Twilio SMS • Instant</span>
+      <!-- Booking Details Card -->
+      <div class="bg-purple-950/40 border border-purple-800/50 rounded-2xl p-4 mb-5 space-y-2 text-xs">
+        <div class="flex justify-between items-center pb-2 border-b border-purple-800/40">
+          <span class="text-gray-400">Client Name:</span>
+          <strong id="modalClientName" class="text-white text-sm">Jessica Smith</strong>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-purple-800/40">
+          <span class="text-gray-400">Selected Service:</span>
+          <strong id="modalService" class="text-purple-300 font-bold text-sm">Small Knotless Braids</strong>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-purple-800/40">
+          <span class="text-gray-400">Requested Date & Time:</span>
+          <strong id="modalDateTime" class="text-white font-medium">2026-09-15 at 10:00 AM</strong>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-gray-400">Phone for Confirmation:</span>
+          <strong id="modalPhoneDisplay" class="text-green-400 font-mono font-bold">(251) 555-0199</strong>
+        </div>
+      </div>
+
+      <!-- DEPOSIT PAYMENT OPTIONS SECTION -->
+      <div class="mb-5">
+        <div class="flex items-center justify-between mb-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5">
+            <i data-feather="credit-card" class="w-4 h-4"></i> Step 1: Pay $10 Booking Deposit
+          </h4>
+          <span class="px-2 py-0.5 rounded-full bg-pink-900/60 border border-pink-500/40 text-pink-300 font-bold text-[11px]">$10 Deposit</span>
         </div>
 
-        <div class="chat-bubble-received p-3 text-xs leading-relaxed space-y-2">
-          <div class="font-bold text-purple-300 flex items-center gap-1">
-            <i data-feather="check-circle" class="w-3.5 h-3.5 text-green-400"></i> Styles by Cece Notice
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+          <!-- Cash App Option -->
+          <div class="bg-emerald-950/40 border border-emerald-500/40 rounded-2xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-all">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-sm">$</div>
+              <div>
+                <div class="font-bold text-white text-xs">Cash App</div>
+                <div class="text-[10px] text-emerald-400 font-mono font-bold">$nastyzia18</div>
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <a id="cashAppButton" href="https://cash.app/$nastyzia18/10" target="_blank" class="w-full py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl text-xs font-extrabold flex items-center justify-center gap-1 shadow-md transition-all">
+                <i data-feather="external-link" class="w-3.5 h-3.5"></i> Pay $10 Cash App
+              </a>
+              <button onclick="copyCashtag()" class="w-full py-1.5 bg-white/5 hover:bg-white/10 text-emerald-300 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1">
+                <i data-feather="copy" class="w-3 h-3"></i> Copy $nastyzia18
+              </button>
+            </div>
           </div>
-          <p id="smsBodyText">
-            Hi! Your appointment request for <strong>Small Knotless ($200)</strong> on <strong>Sept 10 at 10:00 AM</strong> has been received! Please complete your $10 deposit to lock in your slot. Address: Downtown Mobile, AL.
-          </p>
+
+          <!-- Zelle / Apple Pay Option -->
+          <div class="bg-purple-950/40 border border-purple-500/40 rounded-2xl p-3 flex flex-col justify-between hover:border-purple-400 transition-all">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-lg bg-purple-600 text-white font-black flex items-center justify-center text-xs">Z</div>
+              <div>
+                <div class="font-bold text-white text-xs">Zelle / Apple Pay</div>
+                <div class="text-[10px] text-purple-300 font-mono">(251) 545-8911</div>
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <button onclick="copyZelleInfo()" class="w-full py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1 shadow-md transition-all">
+                <i data-feather="copy" class="w-3.5 h-3.5"></i> Copy Zelle Number
+              </button>
+              <a href="tel:+12515458911" class="w-full py-1.5 bg-white/5 hover:bg-white/10 text-purple-300 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1">
+                <i data-feather="phone" class="w-3 h-3"></i> Call / Text Stylist
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- PayPal Fallback -->
+        <a id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD" target="_blank" class="w-full py-2 bg-blue-600/30 border border-blue-500/40 hover:bg-blue-600/50 text-blue-200 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+          <i data-feather="dollar-sign" class="w-4 h-4 text-blue-400"></i> Or Pay $10 via PayPal / Credit Card
+        </a>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="space-y-3">
-        <!-- Direct SMS Link trigger button -->
-        <a id="smsDirectTrigger" href="#" target="_blank" class="w-full py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold text-sm flex items-center justify-center shadow-lg transition-all">
-          <i data-feather="send" class="w-4 h-4 mr-2"></i> Open Mobile Messages (SMS)
+      <!-- SMS NOTIFICATION & ACTION BUTTONS -->
+      <div class="space-y-2.5 pt-3 border-t border-gray-800">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-purple-300 flex items-center gap-1.5 mb-2">
+          <i data-feather="message-square" class="w-4 h-4 text-pink-400"></i> Step 2: Instant SMS Confirmation
+        </h4>
+
+        <!-- Smartphone Message Preview -->
+        <div class="phone-mockup p-3 mb-3 text-xs leading-relaxed space-y-1.5 bg-black/60 rounded-2xl border border-gray-800">
+          <div class="text-[11px] text-gray-400 font-bold flex items-center justify-between border-b border-gray-800/80 pb-1.5">
+            <span>To Stylist: <strong class="text-purple-300">(251) 545-8911</strong></span>
+            <span class="text-green-400 font-semibold">SMS Ready</span>
+          </div>
+          <p id="smsBodyText" class="text-gray-200 text-[11px]">
+            Hi Cece! I requested an appointment for Small Knotless ($200) on 2026-09-15 at 10:00 AM. Deposit being sent via Cash App.
+          </p>
+        </div>
+
+        <!-- Direct SMS One-Tap Trigger button -->
+        <a id="smsDirectTrigger" href="#" target="_blank" class="w-full py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all">
+          <i data-feather="send" class="w-4 h-4"></i> Open Phone Messages (Send SMS to Stylist)
         </a>
 
-        <div class="grid grid-cols-2 gap-3">
-          <a id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD" target="_blank" class="py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold flex items-center justify-center">
-            <i data-feather="dollar-sign" class="w-3.5 h-3.5 mr-1"></i> Pay via PayPal ($10)
-          </a>
-          <a id="cashAppButton" href="https://cash.app/$nastyzia18/10" target="_blank" class="py-3 bg-green-600 hover:bg-green-500 text-white rounded-xl text-xs font-semibold flex items-center justify-center">
-            <i data-feather="dollar-sign" class="w-3.5 h-3.5 mr-1"></i> Pay via Cash App ($10)
-          </a>
-        </div>
-
-        <button id="copySmsBtn" class="w-full py-2.5 bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 rounded-xl text-xs font-medium flex items-center justify-center">
-          <i data-feather="copy" class="w-3.5 h-3.5 mr-1"></i> Copy SMS Message Text
+        <button id="copySmsBtn" class="w-full py-2.5 bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 rounded-xl text-xs font-medium flex items-center justify-center gap-1">
+          <i data-feather="copy" class="w-3.5 h-3.5"></i> Copy SMS Message Text
         </button>
       </div>
 
@@ -1083,7 +1145,7 @@
         price: "$100",
         img: "assets/images/large_knotless.png",
         sizeNote: "Jumbo / Large knotless parting. Fast install, super lightweight & voluminous.",
-        duration: "2 - 3 hours",
+        duration: "3 - 3.5 hours",
         category: "Knotless & Box Braids",
         selectVal: "Large Knotless - $100"
       },
@@ -1091,7 +1153,7 @@
         price: "$130",
         img: "assets/images/medium_knotless.png",
         sizeNote: "Medium finger-width parting. The classic & most popular versatile knotless style.",
-        duration: "3 - 4 hours",
+        duration: "3.5 - 4.5 hours",
         category: "Knotless & Box Braids",
         selectVal: "Medium Knotless - $130"
       },
@@ -1260,46 +1322,20 @@
       mobileNav.classList.toggle('hidden');
     });
 
-    // TWILIO AUTOMATIC CLOUD SMS DISPATCH FUNCTION (NON-BLOCKING WITH TIMEOUT)
-    async function sendTwilioSMS(toPhone, messageBody) {
-      const _sid = 'AC4ad13c29' + '1728fc7172eb3dad0c861ca4';
-      const _tok = '05d53a09fb' + '9599f62b874ca41d';
-      const fromNumber = '+17372583742';
-
-      let formattedPhone = toPhone.replace(/[^0-9]/g, '');
-      if (formattedPhone.length === 10) formattedPhone = '+1' + formattedPhone;
-      else if (!formattedPhone.startsWith('+')) formattedPhone = '+' + formattedPhone;
-
-      const url = `https://api.twilio.com/2010-04-01/Accounts/${_sid}/Messages.json`;
-      const auth = btoa(`${_sid}:${_tok}`);
-
-      const bodyData = new URLSearchParams();
-      bodyData.append('To', formattedPhone);
-      bodyData.append('From', fromNumber);
-      bodyData.append('Body', messageBody);
-
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 1200);
-
-        const res = await fetch(url, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Basic ${auth}`,
-            'Content-Type': 'application/x-www-form-urlencoded'
-          },
-          body: bodyData.toString(),
-          signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-        return res.ok;
-      } catch (e) {
-        console.log('Twilio non-blocking finish');
-        return false;
-      }
+    // Helper functions for Cash App & Zelle
+    function copyCashtag() {
+      navigator.clipboard.writeText("$nastyzia18").then(() => {
+        alert("Cash App cashtag ($nastyzia18) copied to clipboard!");
+      });
     }
 
-    // Form Handling & Instant SMS Confirmation Modal Launch
+    function copyZelleInfo() {
+      navigator.clipboard.writeText("2515458911").then(() => {
+        alert("Zelle Phone Number (251-545-8911) copied to clipboard!");
+      });
+    }
+
+    // Form Handling & Instant Payment & SMS Confirmation Modal Launch
     const form = document.getElementById('bookingForm');
     const bookingMessage = document.getElementById('bookingMessage');
     const smsModal = document.getElementById('smsConfirmationModal');
@@ -1311,63 +1347,75 @@
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<i data-feather="loader" class="animate-spin w-5 h-5 mr-2"></i> Submitting Request...';
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i data-feather="loader" class="animate-spin w-5 h-5 mr-2"></i> Processing Request...';
       feather.replace();
 
-      const name = document.getElementById('clientName').value;
-      const phone = document.getElementById('clientPhone').value;
-      const service = document.getElementById('serviceSelect').value;
+      const name = document.getElementById('clientName').value || 'Valued Client';
+      const phone = document.getElementById('clientPhone').value || '(251) 545-8911';
+      const service = document.getElementById('serviceSelect').value || 'Braids Service';
       const dateCombined = document.getElementById('combinedDateTime').value || 'Requested Date';
       const notes = document.getElementById('clientNotes').value;
 
-      // Construct SMS text message for Client & Stylist
-      const clientSmsText = `Hi ${name}! Your booking request for ${service} on ${dateCombined} at Styles by Cece is RECEIVED! 💇‍♀️ A $10 deposit secures your slot. Location: Downtown Mobile AL. Phone: (251) 545-8911.`;
-      const stylistSmsText = `NEW BOOKING ALERT! Client: ${name}, Phone: ${phone}, Service: ${service}, Date/Time: ${dateCombined}, Notes: ${notes || 'None'}`;
+      // Construct SMS text message for Stylist & Client
+      const smsMessageText = `Hi Cece! New booking request: Client: ${name}, Phone: ${phone}, Service: ${service}, Date/Time: ${dateCombined}. Notes: ${notes || 'None'}. Sending $10 deposit now!`;
 
-      // Launch Twilio SMS in non-blocking background task
-      sendTwilioSMS(phone, clientSmsText).catch(err => console.log(err));
-      sendTwilioSMS('+12515458911', stylistSmsText).catch(err => console.log(err));
-
-      // Attempt Formspree submission with 1.2s fallback timeout
+      // Non-blocking Formspree POST
       try {
         const formData = new FormData(form);
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 1200);
+        const timeoutId = setTimeout(() => controller.abort(), 800);
 
         await fetch(form.action, {
           method: form.method,
           body: formData,
           headers: { 'Accept': 'application/json' },
           signal: controller.signal
-        }).catch(err => console.log('Formspree submit finished'));
+        }).catch(() => console.log('Formspree dispatch completed'));
         clearTimeout(timeoutId);
       } catch (err) {
-        console.log('Form submission processed');
-      } finally {
-        // Show success alert immediately
-        bookingMessage.className = 'mb-6 p-4 rounded-xl bg-green-950/80 border border-green-500/50 text-white font-semibold text-sm shadow-lg flex items-center justify-between';
-        bookingMessage.innerHTML = `
-          <div class="flex items-center gap-2">
-            <i data-feather="check-circle" class="w-5 h-5 text-green-400"></i>
-            <span>✅ Booking Request Submitted! SMS Confirmation Dispatched to <strong>${phone}</strong> & Stylist line!</span>
-          </div>
-        `;
-        bookingMessage.classList.remove('hidden');
-
-        // Update Modal Details
-        document.getElementById('modalPhoneDisplay').textContent = phone;
-        document.getElementById('smsBodyText').innerHTML = `
-          Hi <strong>${name}</strong>! Your appointment request for <strong>${service}</strong> on <strong>${dateCombined}</strong> has been received! 💇‍♀️ An automatic SMS confirmation has been sent to your phone. Location: Downtown Mobile, AL. Stylist Tel: (251) 545-8911.
-        `;
-
-        const cleanPhone = phone.replace(/[^0-9]/g, '') || '12515458911';
-        smsDirectTrigger.href = `sms:${cleanPhone}?body=${encodeURIComponent(clientSmsText)}`;
-
-        smsModal.classList.remove('hidden');
-        submitBtn.innerHTML = originalText;
-        feather.replace();
-        form.reset();
+        console.log('Form submitted');
       }
+
+      // Update Modal Text Elements safely (with null-checks)
+      const elClient = document.getElementById('modalClientName');
+      if (elClient) elClient.textContent = name;
+
+      const elService = document.getElementById('modalService');
+      if (elService) elService.textContent = service;
+
+      const elDateTime = document.getElementById('modalDateTime');
+      if (elDateTime) elDateTime.textContent = dateCombined;
+
+      const elPhone = document.getElementById('modalPhoneDisplay');
+      if (elPhone) elPhone.textContent = phone;
+
+      const elSmsText = document.getElementById('smsBodyText');
+      if (elSmsText) elSmsText.textContent = smsMessageText;
+
+      if (smsDirectTrigger) {
+        smsDirectTrigger.href = `sms:+12515458911?body=${encodeURIComponent(smsMessageText)}`;
+      }
+
+      // Display Green Success Banner above form
+      bookingMessage.className = 'mb-6 p-4 rounded-xl bg-green-950/80 border border-green-500/50 text-white font-semibold text-sm shadow-lg flex items-center justify-between';
+      bookingMessage.innerHTML = `
+        <div class="flex items-center gap-2">
+          <i data-feather="check-circle" class="w-5 h-5 text-green-400"></i>
+          <span>✅ Booking Request Received! Complete your <strong>$10 deposit</strong> below to confirm.</span>
+        </div>
+      `;
+      bookingMessage.classList.remove('hidden');
+
+      // Pop up Payment & Confirmation Modal instantly
+      smsModal.classList.remove('hidden');
+
+      // Reset Submit Button State
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      feather.replace();
+      form.reset();
     });
 
     // Close SMS Modal
@@ -1380,10 +1428,8 @@
 
     // Copy SMS text button
     copySmsBtn.addEventListener('click', () => {
-      const name = document.getElementById('clientName').value || 'Client';
-      const service = document.getElementById('serviceSelect').value || 'Braids Service';
-      const dateCombined = document.getElementById('combinedDateTime').value || 'Requested Date';
-      const text = `Hi ${name}! Your booking request for ${service} on ${dateCombined} at Styles by Cece is RECEIVED! 💇‍♀️ A $10 deposit secures your slot. Phone: (251) 545-8911.`;
+      const elSmsText = document.getElementById('smsBodyText');
+      const text = elSmsText ? elSmsText.textContent : 'Booking Request Confirmation';
       
       navigator.clipboard.writeText(text).then(() => {
         copySmsBtn.innerHTML = '<i data-feather="check" class="w-3.5 h-3.5 mr-1 text-green-400"></i> Copied to Clipboard!';
@@ -1405,3 +1451,4 @@
 
 </body>
 </html>
+
