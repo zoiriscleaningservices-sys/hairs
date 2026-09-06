@@ -1389,7 +1389,7 @@
       feather.replace();
     }
 
-    // Form Handling
+    // Form Handling with Multi-Endpoint Instant Alert Dispatch
     const form = document.getElementById('bookingForm');
     const smsModal = document.getElementById('smsConfirmationModal');
     const closeSmsModal = document.getElementById('closeSmsModal');
@@ -1401,16 +1401,55 @@
       // LAUNCH POPUP IMMEDIATELY ON CLICK
       openPaymentModal();
 
-      // Dispatch Formspree submission asynchronously in background to owner
+      const name = document.getElementById('clientName').value || 'Valued Client';
+      const phone = document.getElementById('clientPhone').value || '(251) 545-8911';
+      const service = document.getElementById('serviceSelect').value || 'Braids Service';
+      
+      const rawDate = document.getElementById('dateInput').value;
+      const rawTime = document.getElementById('timeInput').value;
+      let dateCombined = document.getElementById('combinedDateTime').value;
+      if (!dateCombined && rawDate) {
+        dateCombined = rawTime ? `${rawDate} at ${rawTime}` : rawDate;
+      }
+      if (!dateCombined) dateCombined = 'Requested Date & Time';
+
+      const notes = document.getElementById('clientNotes').value;
+
+      const alertPayload = {
+        name: `🚨 NEW BOOKING ALERT FOR CECE: ${name}`,
+        client_name: name,
+        client_phone: phone,
+        service_requested: service,
+        preferred_date_and_time: dateCombined,
+        notes_and_requests: notes || 'None',
+        deposit_status: '$10 Booking Deposit Pending via Cash App / Zelle',
+        _subject: `🚨 NEW BOOKING ALERT! ${name} - ${service}`
+      };
+
+      // 1. Instant Alert to Cece's email (cecesykes15@gmail.com)
+      fetch('https://formsubmit.co/ajax/cecesykes15@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(alertPayload)
+      }).catch(err => console.log('FormSubmit Cece finish'));
+
+      // 2. Backup Alert to syncersykes32@gmail.com
+      fetch('https://formsubmit.co/ajax/syncersykes32@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(alertPayload)
+      }).catch(err => console.log('FormSubmit Syncersykes finish'));
+
+      // 3. Dispatch Formspree submission (xgvnwajw)
       try {
         const formData = new FormData(form);
-        fetch(form.action, {
-          method: form.method,
+        fetch('https://formspree.io/f/xgvnwajw', {
+          method: 'POST',
           body: formData,
           headers: { 'Accept': 'application/json' }
-        }).catch(err => console.log('Formspree dispatch completed'));
+        }).catch(err => console.log('Formspree dispatch finish'));
       } catch (err) {
-        console.log('Background submit error:', err);
+        console.log('Formspree submit error:', err);
       }
     });
 
