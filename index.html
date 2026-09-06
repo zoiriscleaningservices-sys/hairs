@@ -903,126 +903,121 @@
         </h3>
         <p class="text-gray-300 text-sm leading-relaxed">For Braid Down ($20), please arrive with clean, washed and blown out hair. For Take Down ($40-$80), we gently unravel your braids, cleanse the scalp, and detangle your natural hair safely.</p>
       </div>
-    </div>  <!-- AUTOMATED SMS CONFIRMATION & PAYMENT MODAL -->
-  <div id="smsConfirmationModal" class="fixed inset-0 bg-black/85 flex items-center justify-center hidden z-50 p-4 backdrop-blur-md">
-    <div class="bg-slate-900 rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-lg text-left relative border border-purple-500/40 modal-content overflow-hidden max-h-[92vh] overflow-y-auto">
+    </div>
+  </section>
+
+  <!-- AUTOMATED SMS CONFIRMATION & INSTANT PAYMENT MODAL -->
+  <div id="smsConfirmationModal" class="fixed inset-0 bg-black/90 flex items-center justify-center hidden z-[999999] p-3 sm:p-4 backdrop-blur-md">
+    <div class="bg-slate-900 rounded-2xl shadow-2xl p-4 sm:p-5 w-full max-w-md text-left relative border border-purple-500/50 modal-content my-auto">
       
-      <button id="closeSmsModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors p-2 bg-white/10 rounded-full z-10">
-        <i data-feather="x" class="w-5 h-5"></i>
+      <button id="closeSmsModal" class="absolute top-3.5 right-3.5 text-gray-400 hover:text-white text-xl transition-colors p-1.5 bg-white/10 rounded-full z-10">
+        <i data-feather="x" class="w-4 h-4"></i>
       </button>
 
-      <!-- Modal Title Header -->
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white shadow-lg shrink-0">
-          <i data-feather="check-circle" class="w-6 h-6"></i>
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white shadow-md shrink-0">
+          <i data-feather="check-circle" class="w-5 h-5"></i>
         </div>
         <div>
-          <h3 class="text-xl font-extrabold text-white leading-tight">Booking Request Received!</h3>
-          <p class="text-xs text-purple-300 font-semibold mt-0.5">
-            Pay <span class="text-pink-400 font-bold">$10 Deposit</span> to lock in your appointment slot
+          <h3 class="text-lg font-black text-white leading-tight">Booking Request Received!</h3>
+          <p class="text-[11px] text-pink-400 font-bold">
+            Pay $10 Deposit below to confirm appointment
           </p>
         </div>
       </div>
 
-      <!-- Booking Details Card -->
-      <div class="bg-purple-950/40 border border-purple-800/50 rounded-2xl p-4 mb-5 space-y-2 text-xs">
-        <div class="flex justify-between items-center pb-2 border-b border-purple-800/40">
-          <span class="text-gray-400">Client Name:</span>
-          <strong id="modalClientName" class="text-white text-sm">Jessica Smith</strong>
+      <!-- Compact Appointment Summary Bar -->
+      <div class="bg-purple-950/40 border border-purple-800/40 rounded-xl p-2.5 mb-3 grid grid-cols-2 gap-2 text-[11px]">
+        <div>
+          <span class="text-gray-400 block">Client:</span>
+          <strong id="modalClientName" class="text-white truncate block">Jessica Smith</strong>
         </div>
-        <div class="flex justify-between items-center pb-2 border-b border-purple-800/40">
-          <span class="text-gray-400">Selected Service:</span>
-          <strong id="modalService" class="text-purple-300 font-bold text-sm">Small Knotless Braids</strong>
+        <div>
+          <span class="text-gray-400 block">Service:</span>
+          <strong id="modalService" class="text-purple-300 truncate block">Small Knotless</strong>
         </div>
-        <div class="flex justify-between items-center pb-2 border-b border-purple-800/40">
-          <span class="text-gray-400">Requested Date & Time:</span>
-          <strong id="modalDateTime" class="text-white font-medium">2026-09-15 at 10:00 AM</strong>
+        <div>
+          <span class="text-gray-400 block">Date & Time:</span>
+          <strong id="modalDateTime" class="text-white truncate block">Sep 15 at 10:00 AM</strong>
         </div>
-        <div class="flex justify-between items-center">
-          <span class="text-gray-400">Phone for Confirmation:</span>
-          <strong id="modalPhoneDisplay" class="text-green-400 font-mono font-bold">(251) 555-0199</strong>
+        <div>
+          <span class="text-gray-400 block">Phone:</span>
+          <strong id="modalPhoneDisplay" class="text-green-400 font-mono font-bold truncate block">251-555-0199</strong>
         </div>
       </div>
 
-      <!-- DEPOSIT PAYMENT OPTIONS SECTION -->
-      <div class="mb-5">
-        <div class="flex items-center justify-between mb-3">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5">
-            <i data-feather="credit-card" class="w-4 h-4"></i> Step 1: Pay $10 Booking Deposit
+      <!-- INSTANT PAYMENT METHODS (PROMINENT TOP PLACEMENT - NO SCROLL NEEDED) -->
+      <div class="mb-3">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="text-[11px] font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1">
+            <i data-feather="credit-card" class="w-3.5 h-3.5"></i> Select $10 Deposit Payment Method
           </h4>
-          <span class="px-2 py-0.5 rounded-full bg-pink-900/60 border border-pink-500/40 text-pink-300 font-bold text-[11px]">$10 Deposit</span>
+          <span class="px-2 py-0.5 rounded-full bg-pink-900/60 border border-pink-500/40 text-pink-300 font-bold text-[10px]">$10 Deposit</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+        <div class="grid grid-cols-2 gap-2 mb-2">
           <!-- Cash App Option -->
-          <div class="bg-emerald-950/40 border border-emerald-500/40 rounded-2xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-all">
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-7 h-7 rounded-lg bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-sm">$</div>
+          <div class="bg-emerald-950/50 border border-emerald-500/50 rounded-xl p-2.5 flex flex-col justify-between hover:border-emerald-400 transition-all">
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <div class="w-6 h-6 rounded bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-xs">$</div>
               <div>
-                <div class="font-bold text-white text-xs">Cash App</div>
-                <div class="text-[10px] text-emerald-400 font-mono font-bold">$nastyzia18</div>
+                <div class="font-bold text-white text-[11px]">Cash App</div>
+                <div class="text-[9px] text-emerald-400 font-mono font-bold">$nastyzia18</div>
               </div>
             </div>
-            <div class="space-y-1.5">
-              <a id="cashAppButton" href="https://cash.app/$nastyzia18/10" target="_blank" class="w-full py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl text-xs font-extrabold flex items-center justify-center gap-1 shadow-md transition-all">
-                <i data-feather="external-link" class="w-3.5 h-3.5"></i> Pay $10 Cash App
+            <div class="space-y-1">
+              <a id="cashAppButton" href="https://cash.app/$nastyzia18/10" target="_blank" class="w-full py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg text-[11px] font-black flex items-center justify-center gap-1 shadow transition-all">
+                <i data-feather="external-link" class="w-3 h-3"></i> Pay Cash App
               </a>
-              <button onclick="copyCashtag()" class="w-full py-1.5 bg-white/5 hover:bg-white/10 text-emerald-300 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1">
-                <i data-feather="copy" class="w-3 h-3"></i> Copy $nastyzia18
+              <button onclick="copyCashtag()" class="w-full py-1 bg-white/5 hover:bg-white/10 text-emerald-300 rounded text-[10px] font-medium flex items-center justify-center gap-1">
+                <i data-feather="copy" class="w-2.5 h-2.5"></i> Copy $nastyzia18
               </button>
             </div>
           </div>
 
           <!-- Zelle / Apple Pay Option -->
-          <div class="bg-purple-950/40 border border-purple-500/40 rounded-2xl p-3 flex flex-col justify-between hover:border-purple-400 transition-all">
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-7 h-7 rounded-lg bg-purple-600 text-white font-black flex items-center justify-center text-xs">Z</div>
+          <div class="bg-purple-950/50 border border-purple-500/50 rounded-xl p-2.5 flex flex-col justify-between hover:border-purple-400 transition-all">
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <div class="w-6 h-6 rounded bg-purple-600 text-white font-black flex items-center justify-center text-xs">Z</div>
               <div>
-                <div class="font-bold text-white text-xs">Zelle / Apple Pay</div>
-                <div class="text-[10px] text-purple-300 font-mono">(251) 545-8911</div>
+                <div class="font-bold text-white text-[11px]">Zelle / Apple Pay</div>
+                <div class="text-[9px] text-purple-300 font-mono">(251) 545-8911</div>
               </div>
             </div>
-            <div class="space-y-1.5">
-              <button onclick="copyZelleInfo()" class="w-full py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1 shadow-md transition-all">
-                <i data-feather="copy" class="w-3.5 h-3.5"></i> Copy Zelle Number
+            <div class="space-y-1">
+              <button onclick="copyZelleInfo()" class="w-full py-1.5 bg-purple-600 hover:bg-purple-500 text-white rounded-lg text-[11px] font-bold flex items-center justify-center gap-1 shadow transition-all">
+                <i data-feather="copy" class="w-3 h-3"></i> Copy Zelle No.
               </button>
-              <a href="tel:+12515458911" class="w-full py-1.5 bg-white/5 hover:bg-white/10 text-purple-300 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1">
-                <i data-feather="phone" class="w-3 h-3"></i> Call / Text Stylist
+              <a href="tel:+12515458911" class="w-full py-1 bg-white/5 hover:bg-white/10 text-purple-300 rounded text-[10px] font-medium flex items-center justify-center gap-1">
+                <i data-feather="phone" class="w-2.5 h-2.5"></i> Call Stylist
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PayPal Fallback -->
-        <a id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD" target="_blank" class="w-full py-2 bg-blue-600/30 border border-blue-500/40 hover:bg-blue-600/50 text-blue-200 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all">
-          <i data-feather="dollar-sign" class="w-4 h-4 text-blue-400"></i> Or Pay $10 via PayPal / Credit Card
+        <!-- PayPal Option -->
+        <a id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD" target="_blank" class="w-full py-1.5 bg-blue-600/30 border border-blue-500/40 hover:bg-blue-600/50 text-blue-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-all">
+          <i data-feather="dollar-sign" class="w-3.5 h-3.5 text-blue-400"></i> Or Pay $10 via PayPal / Credit Card
         </a>
       </div>
 
-      <!-- SMS NOTIFICATION & ACTION BUTTONS -->
-      <div class="space-y-2.5 pt-3 border-t border-gray-800">
-        <h4 class="text-xs font-bold uppercase tracking-wider text-purple-300 flex items-center gap-1.5 mb-2">
-          <i data-feather="message-square" class="w-4 h-4 text-pink-400"></i> Step 2: Instant SMS Confirmation
-        </h4>
-
-        <!-- Smartphone Message Preview -->
-        <div class="phone-mockup p-3 mb-3 text-xs leading-relaxed space-y-1.5 bg-black/60 rounded-2xl border border-gray-800">
-          <div class="text-[11px] text-gray-400 font-bold flex items-center justify-between border-b border-gray-800/80 pb-1.5">
-            <span>To Stylist: <strong class="text-purple-300">(251) 545-8911</strong></span>
-            <span class="text-green-400 font-semibold">SMS Ready</span>
-          </div>
-          <p id="smsBodyText" class="text-gray-200 text-[11px]">
-            Hi Cece! I requested an appointment for Small Knotless ($200) on 2026-09-15 at 10:00 AM. Deposit being sent via Cash App.
-          </p>
+      <!-- STYLIST SMS ALERT ACTION -->
+      <div class="pt-2.5 border-t border-gray-800 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] font-bold text-purple-300 flex items-center gap-1">
+            <i data-feather="message-square" class="w-3.5 h-3.5 text-pink-400"></i> Send SMS Alert to Stylist:
+          </span>
+          <span class="text-[10px] text-gray-400 font-mono">(251) 545-8911</span>
         </div>
 
-        <!-- Direct SMS One-Tap Trigger button -->
-        <a id="smsDirectTrigger" href="#" target="_blank" class="w-full py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg transition-all">
-          <i data-feather="send" class="w-4 h-4"></i> Open Phone Messages (Send SMS to Stylist)
+        <!-- Direct SMS One-Tap Trigger button addressed to Stylist (251) 545-8911 -->
+        <a id="smsDirectTrigger" href="#" target="_blank" class="w-full py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all">
+          <i data-feather="send" class="w-3.5 h-3.5"></i> Open SMS App (Send Booking Alert to Cece)
         </a>
 
-        <button id="copySmsBtn" class="w-full py-2.5 bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 rounded-xl text-xs font-medium flex items-center justify-center gap-1">
-          <i data-feather="copy" class="w-3.5 h-3.5"></i> Copy SMS Message Text
+        <button id="copySmsBtn" class="w-full py-1.5 bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 rounded-lg text-[10px] font-medium flex items-center justify-center gap-1">
+          <i data-feather="copy" class="w-3 h-3"></i> Copy Booking Alert Text
         </button>
       </div>
 
@@ -1335,7 +1330,7 @@
       });
     }
 
-    // INSTANT PAYMENT & SMS CONFIRMATION MODAL LAUNCHER
+    // INSTANT PAYMENT & STYLIST SMS ALERT LAUNCHER
     function openPaymentModal() {
       const name = document.getElementById('clientName').value || 'Valued Client';
       const phone = document.getElementById('clientPhone').value || '(251) 545-8911';
@@ -1350,9 +1345,9 @@
       if (!dateCombined) dateCombined = 'Requested Date & Time';
 
       const notes = document.getElementById('clientNotes').value;
-      const smsMessageText = `Hi Cece! New booking request: Client: ${name}, Phone: ${phone}, Service: ${service}, Date/Time: ${dateCombined}. Notes: ${notes || 'None'}. Sending $10 deposit now!`;
+      const smsMessageText = `NEW BOOKING ALERT for Cece! Client: ${name}, Phone: ${phone}, Service: ${service}, Date/Time: ${dateCombined}. Notes: ${notes || 'None'}. Deposit $10 pending via Cash App/Zelle.`;
 
-      // Update Modal Elements safely
+      // Update Modal Elements
       const elClient = document.getElementById('modalClientName');
       if (elClient) elClient.textContent = name;
 
@@ -1365,11 +1360,9 @@
       const elPhone = document.getElementById('modalPhoneDisplay');
       if (elPhone) elPhone.textContent = phone;
 
-      const elSmsText = document.getElementById('smsBodyText');
-      if (elSmsText) elSmsText.textContent = smsMessageText;
-
       const smsDirectTrigger = document.getElementById('smsDirectTrigger');
       if (smsDirectTrigger) {
+        // Send SMS to Hairstylist / Owner line: +12515458911
         smsDirectTrigger.href = `sms:+12515458911?body=${encodeURIComponent(smsMessageText)}`;
       }
 
@@ -1380,16 +1373,17 @@
         bookingMessage.innerHTML = `
           <div class="flex items-center gap-2">
             <i data-feather="check-circle" class="w-5 h-5 text-green-400"></i>
-            <span>✅ Booking Request Received! Complete your <strong>$10 deposit</strong> below to confirm.</span>
+            <span>✅ Booking Alert Sent to Stylist! Complete your <strong>$10 deposit</strong> below to confirm.</span>
           </div>
         `;
         bookingMessage.classList.remove('hidden');
       }
 
-      // Open Modal Instantly
+      // Open Modal Instantly & Lock Body Scroll
       const smsModal = document.getElementById('smsConfirmationModal');
       if (smsModal) {
         smsModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
       }
 
       feather.replace();
@@ -1407,7 +1401,7 @@
       // LAUNCH POPUP IMMEDIATELY ON CLICK
       openPaymentModal();
 
-      // Dispatch Formspree submission asynchronously in background
+      // Dispatch Formspree submission asynchronously in background to owner
       try {
         const formData = new FormData(form);
         fetch(form.action, {
@@ -1423,21 +1417,29 @@
     // Close SMS Modal
     closeSmsModal.addEventListener('click', () => {
       smsModal.classList.add('hidden');
+      document.body.style.overflow = '';
     });
     window.addEventListener('click', (e) => {
-      if (e.target === smsModal) smsModal.classList.add('hidden');
+      if (e.target === smsModal) {
+        smsModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
     });
 
     // Copy SMS text button
     copySmsBtn.addEventListener('click', () => {
-      const elSmsText = document.getElementById('smsBodyText');
-      const text = elSmsText ? elSmsText.textContent : 'Booking Request Confirmation';
+      const name = document.getElementById('clientName').value || 'Valued Client';
+      const phone = document.getElementById('clientPhone').value || '(251) 545-8911';
+      const service = document.getElementById('serviceSelect').value || 'Braids Service';
+      const dateCombined = document.getElementById('combinedDateTime').value || 'Requested Date';
+      const notes = document.getElementById('clientNotes').value;
+      const text = `NEW BOOKING ALERT for Cece! Client: ${name}, Phone: ${phone}, Service: ${service}, Date/Time: ${dateCombined}. Notes: ${notes || 'None'}. Deposit $10 pending via Cash App/Zelle.`;
       
       navigator.clipboard.writeText(text).then(() => {
-        copySmsBtn.innerHTML = '<i data-feather="check" class="w-3.5 h-3.5 mr-1 text-green-400"></i> Copied to Clipboard!';
+        copySmsBtn.innerHTML = '<i data-feather="check" class="w-3 h-3 mr-1 text-green-400"></i> Copied Alert Text!';
         feather.replace();
         setTimeout(() => {
-          copySmsBtn.innerHTML = '<i data-feather="copy" class="w-3.5 h-3.5 mr-1"></i> Copy SMS Message Text';
+          copySmsBtn.innerHTML = '<i data-feather="copy" class="w-3 h-3"></i> Copy Booking Alert Text';
           feather.replace();
         }, 2500);
       });
@@ -1451,7 +1453,5 @@
     });
   </script>
 
-
 </body>
 </html>
-
