@@ -1335,50 +1335,24 @@
       });
     }
 
-    // Form Handling & Instant Payment & SMS Confirmation Modal Launch
-    const form = document.getElementById('bookingForm');
-    const bookingMessage = document.getElementById('bookingMessage');
-    const smsModal = document.getElementById('smsConfirmationModal');
-    const closeSmsModal = document.getElementById('closeSmsModal');
-    const smsDirectTrigger = document.getElementById('smsDirectTrigger');
-    const copySmsBtn = document.getElementById('copySmsBtn');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i data-feather="loader" class="animate-spin w-5 h-5 mr-2"></i> Processing Request...';
-      feather.replace();
-
+    // INSTANT PAYMENT & SMS CONFIRMATION MODAL LAUNCHER
+    function openPaymentModal() {
       const name = document.getElementById('clientName').value || 'Valued Client';
       const phone = document.getElementById('clientPhone').value || '(251) 545-8911';
       const service = document.getElementById('serviceSelect').value || 'Braids Service';
-      const dateCombined = document.getElementById('combinedDateTime').value || 'Requested Date';
-      const notes = document.getElementById('clientNotes').value;
+      
+      const rawDate = document.getElementById('dateInput').value;
+      const rawTime = document.getElementById('timeInput').value;
+      let dateCombined = document.getElementById('combinedDateTime').value;
+      if (!dateCombined && rawDate) {
+        dateCombined = rawTime ? `${rawDate} at ${rawTime}` : rawDate;
+      }
+      if (!dateCombined) dateCombined = 'Requested Date & Time';
 
-      // Construct SMS text message for Stylist & Client
+      const notes = document.getElementById('clientNotes').value;
       const smsMessageText = `Hi Cece! New booking request: Client: ${name}, Phone: ${phone}, Service: ${service}, Date/Time: ${dateCombined}. Notes: ${notes || 'None'}. Sending $10 deposit now!`;
 
-      // Non-blocking Formspree POST
-      try {
-        const formData = new FormData(form);
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 800);
-
-        await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' },
-          signal: controller.signal
-        }).catch(() => console.log('Formspree dispatch completed'));
-        clearTimeout(timeoutId);
-      } catch (err) {
-        console.log('Form submitted');
-      }
-
-      // Update Modal Text Elements safely (with null-checks)
+      // Update Modal Elements safely
       const elClient = document.getElementById('modalClientName');
       if (elClient) elClient.textContent = name;
 
@@ -1394,28 +1368,56 @@
       const elSmsText = document.getElementById('smsBodyText');
       if (elSmsText) elSmsText.textContent = smsMessageText;
 
+      const smsDirectTrigger = document.getElementById('smsDirectTrigger');
       if (smsDirectTrigger) {
         smsDirectTrigger.href = `sms:+12515458911?body=${encodeURIComponent(smsMessageText)}`;
       }
 
       // Display Green Success Banner above form
-      bookingMessage.className = 'mb-6 p-4 rounded-xl bg-green-950/80 border border-green-500/50 text-white font-semibold text-sm shadow-lg flex items-center justify-between';
-      bookingMessage.innerHTML = `
-        <div class="flex items-center gap-2">
-          <i data-feather="check-circle" class="w-5 h-5 text-green-400"></i>
-          <span>✅ Booking Request Received! Complete your <strong>$10 deposit</strong> below to confirm.</span>
-        </div>
-      `;
-      bookingMessage.classList.remove('hidden');
+      const bookingMessage = document.getElementById('bookingMessage');
+      if (bookingMessage) {
+        bookingMessage.className = 'mb-6 p-4 rounded-xl bg-green-950/80 border border-green-500/50 text-white font-semibold text-sm shadow-lg flex items-center justify-between';
+        bookingMessage.innerHTML = `
+          <div class="flex items-center gap-2">
+            <i data-feather="check-circle" class="w-5 h-5 text-green-400"></i>
+            <span>✅ Booking Request Received! Complete your <strong>$10 deposit</strong> below to confirm.</span>
+          </div>
+        `;
+        bookingMessage.classList.remove('hidden');
+      }
 
-      // Pop up Payment & Confirmation Modal instantly
-      smsModal.classList.remove('hidden');
+      // Open Modal Instantly
+      const smsModal = document.getElementById('smsConfirmationModal');
+      if (smsModal) {
+        smsModal.classList.remove('hidden');
+      }
 
-      // Reset Submit Button State
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
       feather.replace();
-      form.reset();
+    }
+
+    // Form Handling
+    const form = document.getElementById('bookingForm');
+    const smsModal = document.getElementById('smsConfirmationModal');
+    const closeSmsModal = document.getElementById('closeSmsModal');
+    const copySmsBtn = document.getElementById('copySmsBtn');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // LAUNCH POPUP IMMEDIATELY ON CLICK
+      openPaymentModal();
+
+      // Dispatch Formspree submission asynchronously in background
+      try {
+        const formData = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).catch(err => console.log('Formspree dispatch completed'));
+      } catch (err) {
+        console.log('Background submit error:', err);
+      }
     });
 
     // Close SMS Modal
@@ -1448,6 +1450,7 @@
       updateSidePreview("Small Knotless");
     });
   </script>
+
 
 </body>
 </html>
