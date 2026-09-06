@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Hairstylist in Mobile, Alabama | Braids, Locs & Natural Hair by Cece</title>
-  <meta name="description" content="Looking for the best hairstylist in Mobile, Alabama? Styles by Cece specializes in flawless knotless braids, feed-ins, box braids, retwists, and men's grooming. Book today!" />
-  <meta name="keywords" content="Mobile Alabama hairstylist, best hairstylist Mobile AL, knotless braids Mobile AL, braided ponytail Mobile, box braids Mobile AL, retwist Mobile AL, loctician Mobile AL, natural hair Mobile AL, men's grooming Mobile AL" />
+  <meta name="description" content="Looking for the best hairstylist in Mobile, Alabama? Styles by Cece specializes in knotless braids, 5 zigzag braids, kids knotless, braid down, take down, retwists, and men's grooming. Book today!" />
+  <meta name="keywords" content="Mobile Alabama hairstylist, best hairstylist Mobile AL, knotless braids Mobile AL, 5 zigzag braids Mobile AL, small knotless braids, XS knotless braids, kids knotless braids, braid down Mobile AL, take down Mobile AL, retwist Mobile AL, loctician Mobile AL, natural hair Mobile AL" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -76,15 +76,15 @@
       "https://www.facebook.com/cecetolit"
     ],
     "priceRange": "$$",
-    "description": "Mobile, Alabama's premier hairstylist specializing in knotless braids, protective styling, and men's grooming."
+    "description": "Mobile, Alabama's premier hairstylist specializing in knotless braids, 5 zigzag braids, kids knotless, protective styling, and men's grooming."
   }
   </script>
-  <!-- Favicon / Website Logo -->
-<link rel="icon" href="https://imgur.com/O1pyXwE.png" type="image/png">
-<link rel="apple-touch-icon" href="https://imgur.com/O1pyXwE.png">
-<meta name="theme-color" content="#ffffff">
 
-  
+  <!-- Favicon / Website Logo -->
+  <link rel="icon" href="https://imgur.com/O1pyXwE.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://imgur.com/O1pyXwE.png">
+  <meta name="theme-color" content="#0b0720">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- AOS for animations -->
@@ -93,7 +93,7 @@
   <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -104,706 +104,1261 @@
     }
 
     .sticky-book {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 50;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
-        }
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 50;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+      70% { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+    }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: radial-gradient(circle at 10% 10%, rgba(123,47,247,0.1), transparent),
-                  radial-gradient(circle at 90% 40%, rgba(59,130,246,0.1), transparent),
+      background: radial-gradient(circle at 10% 10%, rgba(123,47,247,0.15), transparent 40%),
+                  radial-gradient(circle at 90% 40%, rgba(59,130,246,0.15), transparent 40%),
                   linear-gradient(180deg,#04060a 0%, #0b0720 30%, #2b0f22 100%);
       color: #fff;
       min-height: 100vh;
     }
-    h1,h2,h3,h4,h5 {font-family:'Playfair Display', serif;}
+    h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; }
     .btn-primary {
       background: linear-gradient(90deg, var(--accent3), var(--accent1));
       transition: all 0.3s ease;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.25rem;
       border-radius: 999px;
       font-weight: 700;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
-    .btn-primary:hover {transform: translateY(-2px);}
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(123, 47, 247, 0.4);
+    }
     .secondary {
-      background: transparent;
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.2);
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.25rem;
       border-radius: 999px;
       font-weight: 600;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .secondary:hover {
+      background: rgba(255,255,255,0.15);
     }
     .card {
       background: var(--card);
-      padding: 18px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.04);
-      box-shadow: 0 6px 24px rgba(2,6,23,0.4);
-      transition: transform 0.3s ease;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.5);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .card:hover {transform: translateY(-4px);}
-    .gallery .item {
-      border-radius:10px;
-      overflow:hidden;
-      min-height:120px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
-      font-weight:700;
-      color:rgba(255,255,255,0.2);
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(123,47,247,0.4);
+      box-shadow: 0 12px 35px rgba(123,47,247,0.25);
+    }
+    
+    .tab-btn.active {
+      background: linear-gradient(90deg, #ff5aa5, #7b2ff7);
+      color: #fff;
+      font-weight: 700;
+      border-color: transparent;
+    }
+
+    /* Side Preview Card Glowing Effect */
+    .preview-card {
+      background: linear-gradient(145deg, rgba(23, 15, 38, 0.9), rgba(15, 10, 26, 0.95));
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      box-shadow: 0 10px 40px rgba(123, 47, 247, 0.2);
+    }
+
+    /* Smartphone Chat Mockup */
+    .phone-mockup {
+      background: #0f172a;
+      border: 2px solid #334155;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      overflow: hidden;
+    }
+    .chat-bubble-received {
+      background: #1e293b;
+      border-radius: 18px 18px 18px 4px;
+      color: #f1f5f9;
+    }
+    .chat-bubble-sent {
+      background: linear-gradient(135deg, #7b2ff7, #ff5aa5);
+      border-radius: 18px 18px 4px 18px;
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="sticky top-0 z-30 bg-black/70 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+  <header class="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <div class="flex items-center space-x-3">
-        <div class="w-16 h-16 rounded-md overflow-hidden">
+        <div class="w-12 h-12 rounded-xl overflow-hidden border border-purple-500/40 shadow-md">
           <img src="https://imgur.com/O1pyXwE.png" alt="Styles by Cece Logo" class="w-full h-full object-cover">
         </div>
         <div>
-          <div class="font-bold text-lg">Styles by Cece</div>
-          <div class="text-xs text-gray-400">Mobile, Alabama</div>
+          <div class="font-bold text-lg leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-white">Styles by Cece</div>
+          <div class="text-xs text-purple-300 flex items-center gap-1"><i data-feather="map-pin" class="w-3 h-3"></i> Mobile, Alabama</div>
         </div>
       </div>
       <!-- Nav -->
       <nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-6">
-        <a href="#about" class="hover:text-purple-300" title="About Mobile AL Hairstylist Cece">About</a>
-        <a href="#services" class="hover:text-purple-300" title="Braiding & Loc Services in Mobile AL">Services</a>
-        <a href="#gallery" class="hover:text-purple-300">Gallery</a>
-        <a href="#booking" class="hover:text-purple-300">Booking</a>
-        <a href="#contact" class="hover:text-purple-300">Contact</a>
-        <a href="#booking" class="btn-primary" aria-label="Book your knotless braids appointment in Mobile, Alabama">Book Now</a>
+        <a href="#about" class="text-sm hover:text-purple-300 transition-colors" title="About Mobile AL Hairstylist Cece">About</a>
+        <a href="#services" class="text-sm hover:text-purple-300 transition-colors" title="Braids & Services Pricing">Services & Sizes</a>
+        <a href="#gallery" class="text-sm hover:text-purple-300 transition-colors">Gallery</a>
+        <a href="#booking" class="text-sm hover:text-purple-300 transition-colors">Booking & SMS</a>
+        <a href="#contact" class="text-sm hover:text-purple-300 transition-colors">Contact</a>
+        <a href="#booking" class="btn-primary text-sm" aria-label="Book your appointment in Mobile, Alabama">Book Now</a>
       </nav>
       <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-white">
+      <button id="menu-btn" class="md:hidden text-white p-2">
         <i data-feather="menu"></i>
       </button>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-nav" class="hidden md:hidden flex flex-col items-center space-y-3 mt-4">
-      <a href="#about" class="hover:text-purple-300" title="About Mobile AL Hairstylist Cece">About</a>
-      <a href="#services" class="hover:text-purple-300" title="Braiding & Loc Services in Mobile AL">Services</a>
+    <div id="mobile-nav" class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-black/95 border-b border-purple-900/40">
+      <a href="#about" class="hover:text-purple-300">About</a>
+      <a href="#services" class="hover:text-purple-300">Services & Sizes</a>
       <a href="#gallery" class="hover:text-purple-300">Gallery</a>
-      <a href="#booking" class="hover:text-purple-300">Booking</a>
+      <a href="#booking" class="hover:text-purple-300">Booking & SMS</a>
       <a href="#contact" class="hover:text-purple-300">Contact</a>
-      <a href="#booking" class="btn-primary" aria-label="Book your knotless braids appointment in Mobile, Alabama">Book Now</a>
+      <a href="#booking" class="btn-primary">Book Now</a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-8">
+  <section class="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-10">
     <div class="flex-1">
-      <div class="mb-4 inline-block px-4 py-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 font-semibold text-white">Mobile, Alabama • Luxury Hairstylist</div>
-      <h1 class="text-4xl md:text-6xl font-bold mb-4"><span class="sr-only">Top Rated Hairstylist in Mobile, Alabama - </span>Bringing Styles to Life</h1>
-      <p class="mb-6 text-gray-300">Mobile's #1 hairstylist — knotless, feed-ins, box braids, braided ponytails, natural hair and men’s grooming with professional service and stunning results.</p>
-      <div class="flex flex-wrap gap-3">
-        <a href="#booking" class="btn-primary" onclick="scrollToBooking()">Book Your Appointment Today</a>
-        <a href="#services" class="secondary">View Services</a>
+      <div class="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-900/60 border border-purple-500/40 text-xs font-semibold text-purple-200">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+        Mobile, Alabama • Premier Braid Artist
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+        Bringing Precision & Beauty To Life
+      </h1>
+      <p class="mb-6 text-gray-300 text-base md:text-lg leading-relaxed">
+        Mobile's top destination for <strong>knotless braids</strong> (XS to Large), <strong>5 zigzag braids</strong>, <strong>kids knotless</strong>, <strong>braid downs</strong>, <strong>take downs</strong>, and loc maintenance with instant SMS booking confirmation.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#booking" class="btn-primary text-base" onclick="scrollToBooking()">
+          <i data-feather="calendar" class="w-4 h-4 mr-2"></i> Book Appointment
+        </a>
+        <a href="#services" class="secondary text-base">
+          <i data-feather="grid" class="w-4 h-4 mr-2"></i> View Size Guide & Prices
+        </a>
       </div>
     </div>
-    <div class="flex-1 flex justify-center">
-      <div class="w-64 bg-gradient-to-br from-purple-700 to-pink-500 p-4 rounded-xl">
-        <div class="text-sm font-semibold mb-2">Quick Book</div>
-        <select id="quickService" class="w-full p-2 rounded text-black mb-2">
-          <option>Large Knotless - $100</option>
-          <option>Medium Knotless - $130</option>
-          <option>Small Knotless - $185</option>
-          <option>XS Knotless - $230</option>
-          <option>Two Braids - $35</option>
-          <option>4 Criss Cross - $55</option>
-          <option>6 Feed-ins - $60</option>
-          <option>Braided Ponytail - $85</option>
-          <option>Kids Ponytail - $65</option>
-          <option>12 Feed-ins - $110</option>
-          <option>Box Braids - $130</option>
-          <option>Retwist - $75</option>
-          <option>Retwist + Wash - $85</option>
-          <option>Scalp Braids - $50</option>
+    
+    <div class="flex-1 flex justify-center w-full max-w-md">
+      <div class="w-full bg-gradient-to-br from-purple-950 via-slate-900 to-pink-950 p-6 rounded-2xl border border-purple-500/30 shadow-2xl">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm font-bold tracking-wide uppercase text-purple-300 flex items-center gap-1.5">
+            <i data-feather="zap" class="w-4 h-4 text-yellow-400"></i> Quick Select Service
+          </span>
+          <span class="text-xs text-gray-400">Instant Preview</span>
+        </div>
+        <select id="quickService" class="w-full p-3.5 rounded-xl bg-black/60 border border-purple-500/40 text-white font-medium mb-4 focus:ring-2 focus:ring-purple-400 focus:outline-none">
+          <option value="5 Zigzag Braids - $60">5 Zigzag Braids - $60</option>
+          <option value="Small Knotless - $200">Small Knotless - $200</option>
+          <option value="XS Knotless - $250">XS Knotless - $250</option>
+          <option value="Braid Down - $20">Braid Down - $20</option>
+          <option value="Take Down - $40-$80">Take Down - $40-$80</option>
+          <option value="Kids Medium Knotless - $110">Kids Medium Knotless - $110</option>
+          <option value="Kids Large Knot - $85">Kids Large Knot - $85</option>
+          <option value="Kids Small Knot - $150">Kids Small Knot - $150</option>
+          <option value="Large Knotless - $100">Large Knotless - $100</option>
+          <option value="Medium Knotless - $130">Medium Knotless - $130</option>
+          <option value="Two Braids - $35">Two Braids - $35</option>
+          <option value="4 Criss Cross - $55">4 Criss Cross - $55</option>
+          <option value="6 Feed-ins - $60">6 Feed-ins - $60</option>
+          <option value="Braided Ponytail - $85">Braided Ponytail - $85</option>
+          <option value="Kids Ponytail - $65">Kids Ponytail - $65</option>
+          <option value="12 Feed-ins - $110">12 Feed-ins - $110</option>
+          <option value="Box Braids - $130">Box Braids - $130</option>
+          <option value="Retwist - $75">Retwist - $75</option>
+          <option value="Retwist + Wash - $85">Retwist + Wash - $85</option>
+          <option value="Scalp Braids - $50">Scalp Braids - $50</option>
         </select>
-        <button class="btn-primary w-full" onclick="setServiceFromQuick()">Book Now</button>
+        <button class="btn-primary w-full py-3.5" onclick="setServiceFromQuick()">
+          Book & View Example Photo <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+        </button>
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-10 items-center">
+    <div class="flex-1 min-w-[260px]">
+      <div class="text-purple-400 text-sm font-semibold tracking-wider uppercase mb-1">About The Stylist</div>
+      <h2 class="text-3xl font-bold mb-4">Meet Cece — Mobile's Braiding Specialist</h2>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        Hi, I'm Cece! I specialize in clean precision parting, tension-free knotless braids, custom geometric cornrows, gentlest braid take downs, and kids styles. My priority is healthy hair care, neat execution, and making sure you walk out looking and feeling flawless.
+      </p>
+      <div class="grid grid-cols-2 gap-4 mt-6">
+        <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+          <div class="font-bold text-purple-300 text-lg">100% Tension Free</div>
+          <div class="text-xs text-gray-400">Gentle scalp care</div>
+        </div>
+        <div class="p-3 bg-white/5 rounded-xl border border-white/10">
+          <div class="font-bold text-pink-300 text-lg">SMS Booking</div>
+          <div class="text-xs text-gray-400">Instant text confirmation</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 overflow-hidden rounded-2xl border border-purple-500/30 shadow-2xl w-full">
+      <img src="https://imgur.com/cvQ7w3A.png" alt="Cece - Professional Hairstylist in Mobile, Alabama" class="w-full h-full object-cover md:min-h-[340px]">
+    </div>
+  </section>
 
-
-
-
-<!-- ABOUT -->
-<section id="about" class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center">
-  <div class="flex-1 min-w-[260px]">
-    <h2 class="text-2xl font-bold mb-2"><span class="sr-only">Professional Braider in Mobile, AL - </span>Meet Cece</h2>
-    <p class="text-gray-300">Hi, I'm Cece — a professional hairstylist based in Mobile, AL. I specialize in braid artistry, knotless, feed-ins, protective styles, and men’s grooming. I focus on precision, longevity, and a comfortable client experience.</p>
-  </div>
-  <div class="flex-1 overflow-hidden rounded-xl w-full">
-    <img src="https://imgur.com/cvQ7w3A.png" 
-         alt="Cece - Professional Hairstylist in Mobile, Alabama" 
-         class="w-full h-full object-cover md:min-h-[300px] md:h-auto">
-  </div>
-</section>
-
-
-
-
-
-
-
-  <!-- SERVICES -->
+  <!-- SERVICES & PRICING -->
   <section id="services" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold mb-4"><span class="sr-only">Mobile Alabama Braids and Locs </span>Services & Pricing</h2>
-    <p class="text-gray-300 mb-6">Click <em>Book Now</em> beside any service to jump to booking.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Service cards -->
-      <div class="card"><h3 class="font-bold mb-1">Large Knotless</h3><div class="font-semibold mb-2">$100</div><button class="btn-primary w-full" onclick="fillService('Large Knotless - $100')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Medium Knotless</h3><div class="font-semibold mb-2">$130</div><button class="btn-primary w-full" onclick="fillService('Medium Knotless - $130')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Small Knotless</h3><div class="font-semibold mb-2">$185</div><button class="btn-primary w-full" onclick="fillService('Small Knotless - $185')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">XS Knotless</h3><div class="font-semibold mb-2">$230</div><button class="btn-primary w-full" onclick="fillService('XS Knotless - $230')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Two Braids</h3><div class="font-semibold mb-2">$35</div><button class="btn-primary w-full" onclick="fillService('Two Braids - $35')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">4 Criss Cross</h3><div class="font-semibold mb-2">$55</div><button class="btn-primary w-full" onclick="fillService('4 Criss Cross - $55')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">6 Feed-ins</h3><div class="font-semibold mb-2">$60</div><button class="btn-primary w-full" onclick="fillService('6 Feed-ins - $60')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Braided Ponytail</h3><div class="font-semibold mb-2">$85</div><button class="btn-primary w-full" onclick="fillService('Braided Ponytail - $85')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Kids Ponytail</h3><div class="font-semibold mb-2">$65</div><button class="btn-primary w-full" onclick="fillService('Kids Ponytail - $65')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">12 Feed-ins</h3><div class="font-semibold mb-2">$110</div><button class="btn-primary w-full" onclick="fillService('12 Feed-ins - $110')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Box Braids</h3><div class="font-semibold mb-2">$130</div><button class="btn-primary w-full" onclick="fillService('Box Braids - $130')">Book Now</button></div>
-      <!-- Men styles -->
-      <div class="card"><h3 class="font-bold mb-1">Retwist</h3><div class="font-semibold mb-2">$75</div><button class="btn-primary w-full" onclick="fillService('Retwist - $75')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Retwist + Wash</h3><div class="font-semibold mb-2">$85</div><button class="btn-primary w-full" onclick="fillService('Retwist + Wash - $85')">Book Now</button></div>
-      <div class="card"><h3 class="font-bold mb-1">Scalp Braids</h3><div class="font-semibold mb-2">$50</div><button class="btn-primary w-full" onclick="fillService('Scalp Braids - $50')">Book Now</button></div>
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Services, Sizes & Pricing</h2>
+      <p class="text-gray-300">
+        Browse our full menu below. Click <strong>View Example Photo</strong> to view the style picture and size breakdown on screen, or <strong>Book Now</strong> to jump directly to booking!
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex flex-wrap justify-center gap-2 mb-8" id="categoryTabs">
+      <button class="tab-btn active px-4 py-2 rounded-full border border-purple-500/30 text-sm font-medium transition-all" onclick="filterCategory('all', this)">All Services</button>
+      <button class="tab-btn px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-all" onclick="filterCategory('knotless', this)">Knotless & Box Braids</button>
+      <button class="tab-btn px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-all" onclick="filterCategory('feedins', this)">Feed-ins & Braids</button>
+      <button class="tab-btn px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-all" onclick="filterCategory('kids', this)">Kids Styles</button>
+      <button class="tab-btn px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-all" onclick="filterCategory('maintenance', this)">Maintenance & Extras</button>
+      <button class="tab-btn px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-all" onclick="filterCategory('mens', this)">Men's & Loc Care</button>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
+      
+      <!-- 5 Zigzag Braids -->
+      <div class="card service-card" data-cat="feedins">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">5 Zigzag Braids</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$60</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">5 crisp geometric zigzag scalp parting cornrows with sleek feed-in finish.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('5 Zigzag Braids')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('5 Zigzag Braids - $60')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Small Knotless -->
+      <div class="card service-card" data-cat="knotless">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Small Knotless</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$200</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Small / pencil-thick precise square parts. Tension-free roots with lightweight flow.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Small Knotless')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Small Knotless - $200')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- XS Knotless -->
+      <div class="card service-card" data-cat="knotless">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">XS Knotless</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$250</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Extra Small micro parting. Maximum braid density, ultra-sleek and longest lasting.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('XS Knotless')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('XS Knotless - $250')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Braid Down -->
+      <div class="card service-card" data-cat="maintenance">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Braid Down</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$20</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Flat, secure foundation cornrow base designed perfectly for wig & weave installs.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Braid Down')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Braid Down - $20')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Take Down -->
+      <div class="card service-card" data-cat="maintenance">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Take Down</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$40-$80</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Gentle braid unravelling, scalp cleansing, and detangling without breakage.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Take Down')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Take Down - $40-$80')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Kids Medium Knotless -->
+      <div class="card service-card" data-cat="kids">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Kids Medium Knotless</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$110</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Kids medium protective knotless braids. Kid-friendly light tension & high durability.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Kids Medium Knotless')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Kids Medium Knotless - $110')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Kids Large Knot -->
+      <div class="card service-card" data-cat="kids">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Kids Large Knot</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$85</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Kids large knotless/knot braids. Quick installation, comfortable and cute.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Kids Large Knot')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Kids Large Knot - $85')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Kids Small Knot -->
+      <div class="card service-card" data-cat="kids">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Kids Small Knot</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$150</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Kids small knotless/knot braids with fine parting and optional colorful beads.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Kids Small Knot')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Kids Small Knot - $150')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Large Knotless -->
+      <div class="card service-card" data-cat="knotless">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Large Knotless</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$100</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Jumbo / Large knotless parting. Fast install, super lightweight & voluminous.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Large Knotless')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Large Knotless - $100')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Medium Knotless -->
+      <div class="card service-card" data-cat="knotless">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Medium Knotless</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$130</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Medium finger-width parting. The classic & most popular versatile knotless style.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Medium Knotless')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Medium Knotless - $130')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Box Braids -->
+      <div class="card service-card" data-cat="knotless">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Box Braids</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$130</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Traditional box braids with sleek box parts and sealed clean ends.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Box Braids')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Box Braids - $130')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Two Braids -->
+      <div class="card service-card" data-cat="feedins">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Two Braids</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$35</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Two classic feed-in cornrows with sleek edges down to ends.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Two Braids')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Two Braids - $35')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- 4 Criss Cross -->
+      <div class="card service-card" data-cat="feedins">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">4 Criss Cross</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$55</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">4 cornrows featuring intricate criss-cross accent designs up front.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('4 Criss Cross')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('4 Criss Cross - $55')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- 6 Feed-ins -->
+      <div class="card service-card" data-cat="feedins">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">6 Feed-ins</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$60</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">6 neat stitch feed-in cornrows flowing straight back.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('6 Feed-ins')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('6 Feed-ins - $60')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- 12 Feed-ins -->
+      <div class="card service-card" data-cat="feedins">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">12 Feed-ins</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$110</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">12 detailed feed-in cornrows with razor-sharp parts.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('12 Feed-ins')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('12 Feed-ins - $110')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Braided Ponytail -->
+      <div class="card service-card" data-cat="feedins">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Braided Ponytail</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$85</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">High or mid braided ponytail with sleek feed-in base styling.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Braided Ponytail')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Braided Ponytail - $85')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Kids Ponytail -->
+      <div class="card service-card" data-cat="kids">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Kids Ponytail</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$65</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Neat kid's braided ponytail with optional hair cuffs or beads.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Kids Ponytail')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Kids Ponytail - $65')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Retwist -->
+      <div class="card service-card" data-cat="mens">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Retwist</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$75</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Loc retwist with palm roll technique and edge cleanup.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Retwist')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Retwist - $75')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Retwist + Wash -->
+      <div class="card service-card" data-cat="mens">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Retwist + Wash</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$85</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Deep scalp wash, clarifying shampoo, conditioner and full loc retwist.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Retwist + Wash')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Retwist + Wash - $85')">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Scalp Braids -->
+      <div class="card service-card" data-cat="mens">
+        <div class="flex justify-between items-start mb-2">
+          <h3 class="font-bold text-xl text-purple-200">Scalp Braids</h3>
+          <span class="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 font-bold text-lg">$50</span>
+        </div>
+        <p class="text-xs text-gray-300 mb-4">Clean men's/unisex scalp cornrows with custom geometry.</p>
+        <div class="flex gap-2">
+          <button class="secondary text-xs flex-1" onclick="previewService('Scalp Braids')"><i data-feather="image" class="w-3.5 h-3.5 mr-1"></i> Example Picture</button>
+          <button class="btn-primary text-xs flex-1" onclick="fillService('Scalp Braids - $50')">Book Now</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-
-
-
-<!-- GALLERY -->
-<section id="gallery" class="max-w-6xl mx-auto px-4 py-12">
-  <h2 class="text-3xl font-bold mb-4"><span class="sr-only">Hairstyle </span>Gallery<span class="sr-only"> - Mobile AL</span></h2>
-  <p class="text-gray-300 mb-6">
-    Real client looks — follow on Instagram for live updates.
-  </p>
-
-  <!-- Slider Wrapper -->
-  <div class="relative overflow-hidden w-full">
-    <!-- Track -->
-    <div id="galleryTrack" class="flex transition-transform duration-700 ease-in-out">
-      
-      <!-- 18 images -->
-      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/MDWS7t6.png"alt="Medium knotless braids by top Mobile AL hairstylist" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/pXh352F.png " alt="Men\'s retwist and line up in Mobile Alabama" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-      <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/mxkKLdC.png" alt="Clean precision fade and twists in Mobile AL" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/37h5f5E.png" alt="Classic two braids protective style by Cece" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/r43QgSq.png" alt="Creative criss cross men\'s braids in Mobile" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/s5CNFoJ.png" alt="Box braids extensions mobile alabama hair salon" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/vDBg8uD.png" alt="Kids braided ponytail look in Mobile Alabama" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/HnjzujM.png" alt="Neat stitch braids and scalp care by expert Mobile stylist" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/9aEgRhZ.png" alt="Flawless knotless parts by Cece Mobile AL" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/cPZ9fnI.png" alt="Braided updo styling Mobile Alabama" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2">
-        <img src="https://imgur.com/ILCoqVM.png" alt="Local Mobile AL braid artistry and natural hair care" class="rounded-xl w-full h-80 object-cover" />
-      </div>
-
-      <!-- keep adding up to 18 -->
-      
+  <!-- GALLERY SLIDER -->
+  <section id="gallery" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center max-w-xl mx-auto mb-8">
+      <h2 class="text-3xl font-bold mb-2">Client Style Gallery</h2>
+      <p class="text-gray-300 text-sm">Real client transformations and precision braid work in Mobile, AL.</p>
     </div>
-  </div>
-</section>
 
-<script>
-  const track = document.getElementById("galleryTrack");
-  let index = 0;
-  const slides = track.children;
-  const totalSlides = slides.length;
+    <!-- Slider Wrapper -->
+    <div class="relative overflow-hidden w-full rounded-2xl border border-white/10 bg-black/40">
+      <div id="galleryTrack" class="flex transition-transform duration-700 ease-in-out">
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="assets/images/xs_knotless.png" alt="XS Knotless Braids Example" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="assets/images/small_knotless.png" alt="Small Knotless Braids Example" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="assets/images/zigzag_braids.png" alt="5 Zigzag Braids Example" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="assets/images/kids_braids.png" alt="Kids Braids Example" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="assets/images/braid_down.png" alt="Braid Down Example" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="https://imgur.com/MDWS7t6.png" alt="Medium Knotless Braids" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="https://imgur.com/pXh352F.png" alt="Men's Retwist" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+        <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3">
+          <img src="https://imgur.com/r43QgSq.png" alt="Criss Cross Braids" class="rounded-xl w-full h-80 object-cover shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-  function getSlidesPerView() {
-    if (window.innerWidth >= 1024) return 3; // desktop
-    if (window.innerWidth >= 640) return 2; // tablet
-    return 1; // mobile
-  }
+  <script>
+    const track = document.getElementById("galleryTrack");
+    let index = 0;
+    const slides = track.children;
+    const totalSlides = slides.length;
 
-  function autoSlide() {
-    const slidesPerView = getSlidesPerView();
-    index++;
-    track.style.transition = "transform 0.7s ease-in-out";
-    track.style.transform = `translateX(-${index * (100 / slidesPerView)}%)`;
-
-    // reset at end
-    if (index > totalSlides - slidesPerView) {
-      setTimeout(() => {
-        track.style.transition = "none";
-        track.style.transform = "translateX(0)";
-        index = 0;
-      }, 700);
+    function getSlidesPerView() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 640) return 2;
+      return 1;
     }
-  }
 
-  setInterval(autoSlide, 3000);
-</script>
+    function autoSlide() {
+      const slidesPerView = getSlidesPerView();
+      index++;
+      track.style.transition = "transform 0.7s ease-in-out";
+      track.style.transform = `translateX(-${index * (100 / slidesPerView)}%)`;
 
+      if (index > totalSlides - slidesPerView) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          track.style.transform = "translateX(0)";
+          index = 0;
+        }, 700);
+      }
+    }
+    setInterval(autoSlide, 3500);
+  </script>
 
+  <!-- BOOKING SECTION WITH SIDE-BY-SIDE STYLE & SIZE GUIDE PREVIEW -->
+  <section id="booking" class="max-w-6xl mx-auto px-4 py-12 bg-slate-950/70 backdrop-blur-md rounded-3xl border border-purple-500/30 shadow-2xl" data-aos="fade-up">
+    
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-xs font-semibold text-purple-300 mb-3">
+        <i data-feather="smartphone" class="w-3.5 h-3.5 text-pink-400"></i> Automatic SMS Confirmation Included
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Book Appointment & View Size</h2>
+      <p class="text-gray-300 text-sm md:text-base">
+        Select a service to see an <strong>example picture on screen</strong> of the braid size & parting style. Upon booking, an automatic SMS confirmation is prepared directly for your phone number.
+      </p>
+    </div>
 
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT SIDE (Cols 5): SIDE-BY-SIDE STYLE & SIZE EXAMPLE PICTURE CARD -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div id="sidePreviewCard" class="preview-card p-6 rounded-2xl relative overflow-hidden transition-all duration-300">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full bg-purple-900/80 text-purple-200 text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+              <i data-feather="eye" class="w-3 h-3 text-pink-400"></i> Size & Style Example
+            </span>
+            <span id="sidePriceTag" class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-300">
+              $200
+            </span>
+          </div>
 
+          <!-- Dynamic Example Image -->
+          <div class="relative rounded-xl overflow-hidden mb-4 border border-purple-500/30 group bg-black/60 aspect-video md:aspect-square flex items-center justify-center">
+            <img id="sidePreviewImg" src="assets/images/small_knotless.png" alt="Braid Size Example Picture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+              <div>
+                <h4 id="sideStyleTitle" class="text-lg font-bold text-white leading-tight">Small Knotless</h4>
+                <p id="sideCategoryTag" class="text-xs text-purple-300">Knotless & Box Braids</p>
+              </div>
+            </div>
+          </div>
 
+          <!-- Description & Details -->
+          <div class="space-y-3 bg-black/40 p-4 rounded-xl border border-white/5 text-xs text-gray-300">
+            <div>
+              <strong class="text-purple-300 font-semibold block mb-0.5"><i data-feather="scissors" class="w-3 h-3 inline mr-1"></i> Parting & Thickness:</strong>
+              <span id="sideSizeNote">Small / pencil-thick precise square parts. Tension-free roots with lightweight flow.</span>
+            </div>
+            <div class="flex justify-between items-center pt-2 border-t border-white/10 text-gray-300">
+              <span class="flex items-center"><i data-feather="clock" class="w-3.5 h-3.5 mr-1 text-pink-400"></i> Estimated Time:</span>
+              <span id="sideDuration" class="font-semibold text-white">4.5 - 5.5 hours</span>
+            </div>
+          </div>
 
+          <!-- Quick Thumbnails to Tap & Compare Sizes -->
+          <div class="mt-4">
+            <div class="text-xs font-semibold text-gray-400 mb-2 flex items-center justify-between">
+              <span>Quick Compare Sizes & Styles:</span>
+              <span class="text-[10px] text-purple-400">Click to view</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2" id="quickThumbnails">
+              <button onclick="previewService('5 Zigzag Braids')" class="p-1 rounded-lg bg-black/50 border border-white/10 hover:border-purple-400 text-[10px] text-center truncate font-medium">5 Zigzag</button>
+              <button onclick="previewService('Small Knotless')" class="p-1 rounded-lg bg-black/50 border border-purple-500 text-[10px] text-center truncate font-medium text-purple-300">Small Knot</button>
+              <button onclick="previewService('XS Knotless')" class="p-1 rounded-lg bg-black/50 border border-white/10 hover:border-purple-400 text-[10px] text-center truncate font-medium">XS Knot</button>
+              <button onclick="previewService('Kids Medium Knotless')" class="p-1 rounded-lg bg-black/50 border border-white/10 hover:border-purple-400 text-[10px] text-center truncate font-medium">Kids Knot</button>
+            </div>
+          </div>
+        </div>
 
+        <!-- Policy Summary -->
+        <div class="bg-black/40 p-5 rounded-2xl border border-gray-800 space-y-3 text-xs text-gray-300">
+          <div class="flex items-center text-purple-300 font-bold text-sm">
+            <i data-feather="check-circle" class="w-4 h-4 mr-2 text-green-400"></i> Booking & Deposit Rules
+          </div>
+          <ul class="space-y-1.5 list-disc pl-4 text-gray-300">
+            <li><strong>$10 Deposit Required:</strong> Applied directly to total service cost.</li>
+            <li><strong>SMS Text Notice:</strong> Instant text message dispatch after submitting.</li>
+            <li><strong>Preparation:</strong> Arrive with hair washed & blown out clean.</li>
+          </ul>
+        </div>
+      </div>
 
-<!-- BOOKING -->
-<section id="booking" class="max-w-6xl mx-auto px-4 py-12 bg-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-800 shadow-xl" data-aos="fade-up" data-aos-delay="200">
-  <h2 class="text-3xl font-bold mb-6 text-center">Book an Appointment</h2>
-  <p class="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
-    Complete the booking form below. A $10 nonrefundable deposit is required to secure your appointment.
-  </p>
+      <!-- RIGHT SIDE (Cols 7): BOOKING FORM WITH AUTOMATIC SMS TRIGGER -->
+      <div class="lg:col-span-7">
+        <div id="bookingMessage" class="hidden mb-6 p-4 rounded-xl text-white font-semibold shadow-lg"></div>
 
-  <div class="grid md:grid-cols-2 gap-10">
-    <!-- Left info -->
-    <div class="space-y-6">
-      <div class="p-6 bg-gradient-to-br from-purple-900 to-pink-700 rounded-xl mb-6 border border-purple-500/30">
-        <div class="flex items-start">
-          <i data-feather="alert-circle" class="text-yellow-300 mr-3 mt-1"></i>
-          <p class="text-sm text-gray-100">
-            <strong>Important:</strong> $10 nonrefundable deposit required. Please arrive with hair blowed out. Contact us 24 hours in advance for changes.
+        <form id="bookingForm" action="https://formspree.io/f/xgvnwajw" method="POST" class="space-y-5 bg-black/50 p-6 md:p-8 rounded-2xl border border-purple-500/20">
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Full Name *</label>
+              <input type="text" id="clientName" name="name" placeholder="e.g. Jessica Smith" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-gray-700 text-white focus:ring-2 focus:ring-purple-500 focus:outline-none text-sm">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Phone Number (For SMS Confirmation) *</label>
+              <input type="tel" id="clientPhone" name="phone" placeholder="(251) 555-0199" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-gray-700 text-white focus:ring-2 focus:ring-purple-500 focus:outline-none text-sm">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Email Address *</label>
+            <input type="email" id="clientEmail" name="email" placeholder="jessica@example.com" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-gray-700 text-white focus:ring-2 focus:ring-purple-500 focus:outline-none text-sm">
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider">Select Service & Size *</label>
+              <span class="text-xs text-purple-400 font-medium">Updates example picture automatically</span>
+            </div>
+            <select name="service" id="serviceSelect" required class="w-full p-3.5 rounded-xl bg-slate-900 border border-purple-500/40 text-white font-medium focus:ring-2 focus:ring-purple-500 focus:outline-none text-sm">
+              <option value="">Choose a service style...</option>
+              <optgroup label="✨ Requested Braid Services">
+                <option value="5 Zigzag Braids - $60">5 Zigzag Braids - $60</option>
+                <option value="Small Knotless - $200">Small Knotless - $200</option>
+                <option value="XS Knotless - $250">XS Knotless - $250</option>
+                <option value="Braid Down - $20">Braid Down - $20</option>
+                <option value="Take Down - $40-$80">Take Down - $40-$80</option>
+                <option value="Kids Medium Knotless - $110">Kids Medium Knotless - $110</option>
+                <option value="Kids Large Knot - $85">Kids Large Knot - $85</option>
+                <option value="Kids Small Knot - $150">Kids Small Knot - $150</option>
+              </optgroup>
+              <optgroup label="👑 Adult Knotless & Box Braids">
+                <option value="Large Knotless - $100">Large Knotless - $100</option>
+                <option value="Medium Knotless - $130">Medium Knotless - $130</option>
+                <option value="Box Braids - $130">Box Braids - $130</option>
+              </optgroup>
+              <optgroup label="🔥 Feed-ins & Ponytails">
+                <option value="Two Braids - $35">Two Braids - $35</option>
+                <option value="4 Criss Cross - $55">4 Criss Cross - $55</option>
+                <option value="6 Feed-ins - $60">6 Feed-ins - $60</option>
+                <option value="12 Feed-ins - $110">12 Feed-ins - $110</option>
+                <option value="Braided Ponytail - $85">Braided Ponytail - $85</option>
+                <option value="Kids Ponytail - $65">Kids Ponytail - $65</option>
+              </optgroup>
+              <optgroup label="💈 Men's & Loc Maintenance">
+                <option value="Retwist - $75">Retwist - $75</option>
+                <option value="Retwist + Wash - $85">Retwist + Wash - $85</option>
+                <option value="Scalp Braids - $50">Scalp Braids - $50</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Preferred Date & Time (Central Time) *</label>
+            <div class="flex gap-3">
+              <input type="date" id="dateInput" required class="w-1/2 p-3.5 rounded-xl bg-slate-900 border border-gray-700 text-white text-sm focus:ring-2 focus:ring-purple-500">
+              <input type="time" id="timeInput" required step="900" class="w-1/2 p-3.5 rounded-xl bg-slate-900 border border-gray-700 text-white text-sm focus:ring-2 focus:ring-purple-500">
+            </div>
+            <p id="currentTime" class="text-xs text-gray-400 mt-2 flex items-center gap-1">
+              <i data-feather="clock" class="w-3 h-3"></i> Current Mobile AL Time: Loading...
+            </p>
+            <input type="hidden" name="date" id="combinedDateTime">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Additional Notes / Length Request</label>
+            <textarea name="notes" id="clientNotes" placeholder="Specify preferred hair length, color, or special requests..." rows="3" class="w-full p-3.5 rounded-xl bg-slate-900 border border-gray-700 text-white text-sm focus:ring-2 focus:ring-purple-500"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full py-4 text-base font-bold flex items-center justify-center shadow-lg">
+            <i data-feather="send" class="w-5 h-5 mr-2"></i> Submit & Receive SMS Confirmation
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIME HANDLING SCRIPT -->
+  <script>
+    function updateCombinedDateTime() {
+      const date = document.getElementById('dateInput').value;
+      const time = document.getElementById('timeInput').value;
+      if (date && time) {
+        const localDateTime = new Date(`${date}T${time}`);
+        const centralTime = new Date(localDateTime.toLocaleString("en-US", { timeZone: "America/Chicago" }));
+        document.getElementById('combinedDateTime').value = centralTime.toLocaleString("en-US", {
+          timeZone: "America/Chicago",
+          dateStyle: "medium",
+          timeStyle: "short"
+        });
+      }
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const central = new Date(now.toLocaleString("en-US", { timeZone: "America/Chicago" }));
+      const timeElem = document.getElementById('currentTime');
+      if (timeElem) {
+        timeElem.innerHTML = `<i data-feather="clock" class="w-3 h-3 inline mr-1"></i> Current Mobile, AL Time: ` + 
+          central.toLocaleTimeString("en-US", { hour: 'numeric', minute: '2-digit', hour12: true });
+        feather.replace();
+      }
+    }
+
+    document.getElementById('dateInput').addEventListener('change', updateCombinedDateTime);
+    document.getElementById('timeInput').addEventListener('change', updateCombinedDateTime);
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+  <!-- FAQ SECTION -->
+  <section class="max-w-4xl mx-auto mt-16 px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800">
+        <h3 class="font-bold text-lg mb-2 flex items-center text-purple-300">
+          <i data-feather="help-circle" class="text-pink-400 mr-2 w-5 h-5"></i> How does the SMS booking confirmation work?
+        </h3>
+        <p class="text-gray-300 text-sm leading-relaxed">As soon as you submit the booking form, an automated SMS text message preview is generated for your phone number. You can tap 'Send SMS Confirmation' to instantly text your booking details directly to our phone line or receive confirmation updates.</p>
+      </div>
+      
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800">
+        <h3 class="font-bold text-lg mb-2 flex items-center text-purple-300">
+          <i data-feather="help-circle" class="text-pink-400 mr-2 w-5 h-5"></i> What is the difference between XS, Small, and Medium Knotless?
+        </h3>
+        <p class="text-gray-300 text-sm leading-relaxed">XS Knotless ($250) has micro square parts for ultimate density and longest longevity. Small Knotless ($200) features pencil-thick square parts with high fullness. Medium Knotless ($130) uses standard finger-width parting for a classic protective look.</p>
+      </div>
+
+      <div class="bg-gray-900/40 p-6 rounded-2xl border border-gray-800">
+        <h3 class="font-bold text-lg mb-2 flex items-center text-purple-300">
+          <i data-feather="help-circle" class="text-pink-400 mr-2 w-5 h-5"></i> How should I prepare for a Braid Down or Take Down?
+        </h3>
+        <p class="text-gray-300 text-sm leading-relaxed">For Braid Down ($20), please arrive with clean, washed and blown out hair. For Take Down ($40-$80), we gently unravel your braids, cleanse the scalp, and detangle your natural hair safely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOMATED SMS CONFIRMATION & PAYMENT MODAL -->
+  <div id="smsConfirmationModal" class="fixed inset-0 bg-black/85 flex items-center justify-center hidden z-50 p-4 backdrop-blur-md">
+    <div class="bg-slate-900 rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-lg text-left relative border border-purple-500/40 modal-content overflow-hidden">
+      
+      <button id="closeSmsModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors p-2 bg-white/10 rounded-full">
+        <i data-feather="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-purple-600/30 border border-purple-500/50 flex items-center justify-center text-purple-300">
+          <i data-feather="message-square" class="w-5 h-5 text-pink-400"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white">Booking & SMS Confirmation</h3>
+          <p class="text-xs text-green-400 flex items-center gap-1 font-semibold">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Instant Confirmation Ready
           </p>
         </div>
       </div>
 
-      <div class="policy-card p-5 rounded-lg">
-        <h3 class="font-bold mb-3 text-lg flex items-center">
-          <i data-feather="list" class="mr-2 text-purple-400"></i> How it works
-        </h3>
-        <ol class="text-gray-300 pl-4 list-decimal space-y-2">
-          <li>Choose your service and preferred date/time.</li>
-          <li>Submit the booking request — we'll confirm or propose alternate times.</li>
-          <li>Pay the $10 deposit to secure the booking (choose payment method below).</li>
-        </ol>
-      </div>
-
-      <div class="policy-card p-5 rounded-lg">
-        <h3 class="font-bold mb-3 text-lg flex items-center">
-          <i data-feather="file-text" class="mr-2 text-purple-400"></i> Additional Policies
-        </h3>
-        <ul class="text-gray-300 pl-4 list-disc space-y-2">
-          <li><strong>Cancellation Fee:</strong> $30 (must cancel 24 hours in advance).</li>
-          <li><strong>Grace Period:</strong> 15 minutes allowed — after that, $10 fee applies.</li>
-          <li><strong>Squeeze-ins:</strong> Additional $20 fee.</li>
-          <li><strong>Wash & Blowout:</strong> +$25 service add-on.</li>
-        </ul>
-      </div>
-
-      <div class="bg-black/40 p-5 rounded-lg border border-gray-700">
-        <h3 class="font-bold mb-3 text-lg flex items-center">
-          <i data-feather="clock" class="mr-2 text-purple-400"></i> Business Hours
-        </h3>
-        <ul class="text-gray-300 space-y-2">
-          <li class="flex justify-between"><span>Monday - Friday:</span> <span>9:00 AM - 7:00 PM</span></li>
-          <li class="flex justify-between"><span>Saturday:</span> <span>9:00 AM - 5:00 PM</span></li>
-          <li class="flex justify-between"><span>Sunday:</span> <span>Open</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Right form -->
-    <div>
-      <div id="bookingMessage" class="hidden mb-6 p-4 rounded text-white font-semibold"></div>
-
-      <form id="bookingForm" action="https://formspree.io/f/xgvnwajw" method="POST" class="space-y-5">
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-          <input type="text" name="name" placeholder="Your full name" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+      <!-- Smartphone Message Bubble Simulation -->
+      <div class="phone-mockup p-4 mb-6 space-y-3">
+        <div class="flex items-center justify-between text-[11px] text-gray-400 border-b border-gray-800 pb-2">
+          <span>To: <strong id="modalPhoneDisplay" class="text-white">(251) 545-8911</strong></span>
+          <span>Just Now • SMS</span>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-          <input type="email" name="email" placeholder="your.email@example.com" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-          <input type="tel" name="phone" placeholder="(123) 456-7890" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Select Service</label>
-          <select name="service" id="serviceSelect" required class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
-            <option value="">Choose a service</option>
-            <option>Large Knotless - $100</option>
-            <option>Medium Knotless - $130</option>
-            <option>Small Knotless - $185</option>
-            <option>XS Knotless - $230</option>
-            <option>Two Braids - $35</option>
-            <option>4 Criss Cross - $55</option>
-            <option>6 Feed-ins - $60</option>
-            <option>Braided Ponytail - $85</option>
-            <option>Kids Ponytail - $65</option>
-            <option>12 Feed-ins - $110</option>
-            <option>Box Braids - $130</option>
-            <option>Retwist - $75</option>
-            <option>Retwist + Wash - $85</option>
-            <option>Scalp Braids - $50</option>
-          </select>
-        </div>
-
-        <!-- Fixed 12-hour time version -->
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Preferred Date & Time (Central Time)</label>
-          <div class="flex gap-3">
-            <input type="date" id="dateInput" required class="w-1/2 p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
-            <input type="time" id="timeInput" required step="900" class="w-1/2 p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500">
+        <div class="chat-bubble-received p-3 text-xs leading-relaxed space-y-2">
+          <div class="font-bold text-purple-300 flex items-center gap-1">
+            <i data-feather="check-circle" class="w-3.5 h-3.5 text-green-400"></i> Styles by Cece Appointment Notice
           </div>
-          <p id="currentTime" class="text-xs text-gray-400 mt-2"></p>
-          <input type="hidden" name="date" id="combinedDateTime">
+          <p id="smsBodyText">
+            Hi! Your appointment request for <strong>Small Knotless ($200)</strong> on <strong>Sept 10 at 10:00 AM</strong> has been received! Please complete your $10 deposit to lock in your slot. Address: Downtown Mobile, AL.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-3">
+        <!-- Direct SMS Link trigger button -->
+        <a id="smsDirectTrigger" href="#" target="_blank" class="w-full py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold text-sm flex items-center justify-center shadow-lg transition-all">
+          <i data-feather="send" class="w-4 h-4 mr-2"></i> Send Confirmation Text Now (SMS)
+        </a>
+
+        <div class="grid grid-cols-2 gap-3">
+          <a id="paypalButton" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD" target="_blank" class="py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold flex items-center justify-center">
+            <i data-feather="dollar-sign" class="w-3.5 h-3.5 mr-1"></i> Pay via PayPal ($10)
+          </a>
+          <a id="cashAppButton" href="https://cash.app/$nastyzia18/10" target="_blank" class="py-3 bg-green-600 hover:bg-green-500 text-white rounded-xl text-xs font-semibold flex items-center justify-center">
+            <i data-feather="dollar-sign" class="w-3.5 h-3.5 mr-1"></i> Pay via Cash App ($10)
+          </a>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>
-          <textarea name="notes" placeholder="Any special requests or information we should know?" rows="4" class="w-full p-4 rounded-lg form-input bg-black/40 border border-gray-700 focus:ring-2 focus:ring-purple-500"></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary w-full py-4 rounded-lg text-lg font-semibold flex items-center justify-center">
-          <i data-feather="calendar" class="mr-2"></i> Submit Booking Request
+        <button id="copySmsBtn" class="w-full py-2.5 bg-white/5 border border-white/10 hover:bg-white/10 text-gray-300 rounded-xl text-xs font-medium flex items-center justify-center">
+          <i data-feather="copy" class="w-3.5 h-3.5 mr-1"></i> Copy SMS Message Text
         </button>
-      </form>
+      </div>
+
     </div>
   </div>
-</section>
 
-<!-- Time handling script -->
-<script>
-  function updateCombinedDateTime() {
-    const date = document.getElementById('dateInput').value;
-    const time = document.getElementById('timeInput').value;
-    if (date && time) {
-      const localDateTime = new Date(`${date}T${time}`);
-      const centralTime = new Date(localDateTime.toLocaleString("en-US", { timeZone: "America/Chicago" }));
-      document.getElementById('combinedDateTime').value = centralTime.toLocaleString("en-US", {
-        timeZone: "America/Chicago",
-        dateStyle: "medium",
-        timeStyle: "short"
+  <!-- CONTACT & FOOTER -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-3">Contact & Follow Cece</h2>
+    <p class="text-gray-300 mb-8 text-sm">Reach out directly or stay updated on social media.</p>
+
+    <div class="flex justify-center gap-6 mb-8">
+      <a href="https://instagram.com/cece_styles__" target="_blank" class="hover:scale-110 transition-transform">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-10 h-10 rounded-xl"/>
+      </a>
+      <a href="https://tiktok.com/@_mosthated_cece" target="_blank" class="hover:scale-110 transition-transform">
+        <img src="https://i.ibb.co/4wc5Hzc7/tiktok-logo-icon-free-png.webp" alt="TikTok" class="w-10 h-10 rounded-xl"/>
+      </a>
+      <a href="https://www.facebook.com/cecetolit" target="_blank" class="hover:scale-110 transition-transform">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" class="w-10 h-10 rounded-xl"/>
+      </a>
+      <a href="mailto:cecesykes15@gmail.com" class="hover:scale-110 transition-transform">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="w-10 h-10 rounded-xl"/>
+      </a>
+      <a href="tel:+12515458911" class="hover:scale-110 transition-transform">
+        <img src="https://i.ibb.co/5h391w4F/2013-08-26-09-38-25-Phone-i-OS7-App-Icon-Rounded.png" alt="Phone" class="w-10 h-10 rounded-xl"/>
+      </a>
+    </div>
+
+    <!-- Map -->
+    <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-8">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!4v1711234567890!6m8!1m7!1sCAoSLEFGMVFpcE1FdFZ2aEJzYUVuTFlQbU8wYzZtR2Vzclh2VE1MZnptZVVCN3Vt!2m2!1d30.694356!2d-88.043054!3f90!4f0!5f0.7820865974627469" 
+        width="100%" 
+        height="320" 
+        style="border:0;" 
+        allowfullscreen 
+        loading="lazy"
+        class="w-full">
+      </iframe>
+    </div>
+
+    <p class="text-gray-500 text-xs">© 2025 Styles by Cece | Mobile, Alabama • All Rights Reserved</p>
+  </section>
+
+  <!-- Sticky Book Button -->
+  <a href="#booking" class="btn-primary sticky-book text-white px-6 py-3 rounded-full text-sm font-bold shadow-2xl flex items-center gap-2">
+    <i data-feather="calendar" class="w-4 h-4"></i> Book Now
+  </a>
+
+  <!-- DYNAMIC JAVASCRIPT FOR SERVICES, SIDE PREVIEW & AUTOMATED SMS -->
+  <script>
+    // Detailed catalog map of services with example image assets and size specs
+    const serviceCatalog = {
+      "5 Zigzag Braids": {
+        price: "$60",
+        img: "assets/images/zigzag_braids.png",
+        sizeNote: "5 crisp geometric zigzag scalp parting cornrows with sleek feed-in finish.",
+        duration: "2 - 2.5 hours",
+        category: "Feed-ins & Braids",
+        selectVal: "5 Zigzag Braids - $60"
+      },
+      "Small Knotless": {
+        price: "$200",
+        img: "assets/images/small_knotless.png",
+        sizeNote: "Small / pencil-thick precise square parts. Tension-free roots with lightweight flow.",
+        duration: "4.5 - 5.5 hours",
+        category: "Knotless & Box Braids",
+        selectVal: "Small Knotless - $200"
+      },
+      "XS Knotless": {
+        price: "$250",
+        img: "assets/images/xs_knotless.png",
+        sizeNote: "Extra Small micro parting. Maximum braid density, ultra-sleek and longest lasting.",
+        duration: "5.5 - 7 hours",
+        category: "Knotless & Box Braids",
+        selectVal: "XS Knotless - $250"
+      },
+      "Braid Down": {
+        price: "$20",
+        img: "assets/images/braid_down.png",
+        sizeNote: "Flat, secure foundation cornrow base designed perfectly for wig & weave installs.",
+        duration: "45 mins - 1 hour",
+        category: "Maintenance & Extras",
+        selectVal: "Braid Down - $20"
+      },
+      "Take Down": {
+        price: "$40-$80",
+        img: "assets/images/take_down.png",
+        sizeNote: "Gentle braid unravelling, scalp cleansing, and detangling without breakage.",
+        duration: "1.5 - 3 hours",
+        category: "Maintenance & Extras",
+        selectVal: "Take Down - $40-$80"
+      },
+      "Kids Medium Knotless": {
+        price: "$110",
+        img: "assets/images/kids_braids.png",
+        sizeNote: "Kids medium protective knotless braids. Kid-friendly light tension & high durability.",
+        duration: "2.5 - 3.5 hours",
+        category: "Kids Styles",
+        selectVal: "Kids Medium Knotless - $110"
+      },
+      "Kids Large Knot": {
+        price: "$85",
+        img: "assets/images/kids_braids.png",
+        sizeNote: "Kids large knotless/knot braids. Quick installation, comfortable and cute.",
+        duration: "2 - 2.5 hours",
+        category: "Kids Styles",
+        selectVal: "Kids Large Knot - $85"
+      },
+      "Kids Small Knot": {
+        price: "$150",
+        img: "assets/images/kids_braids.png",
+        sizeNote: "Kids small knotless/knot braids with fine parting and optional colorful beads.",
+        duration: "3.5 - 4.5 hours",
+        category: "Kids Styles",
+        selectVal: "Kids Small Knot - $150"
+      },
+      "Large Knotless": {
+        price: "$100",
+        img: "https://imgur.com/MDWS7t6.png",
+        sizeNote: "Jumbo / Large knotless parting. Fast install, super lightweight & voluminous.",
+        duration: "2 - 3 hours",
+        category: "Knotless & Box Braids",
+        selectVal: "Large Knotless - $100"
+      },
+      "Medium Knotless": {
+        price: "$130",
+        img: "https://imgur.com/MDWS7t6.png",
+        sizeNote: "Medium finger-width parting. The classic & most popular versatile knotless style.",
+        duration: "3 - 4 hours",
+        category: "Knotless & Box Braids",
+        selectVal: "Medium Knotless - $130"
+      },
+      "Box Braids": {
+        price: "$130",
+        img: "https://imgur.com/s5CNFoJ.png",
+        sizeNote: "Traditional box braids with sleek box parts and sealed clean ends.",
+        duration: "4 hours",
+        category: "Knotless & Box Braids",
+        selectVal: "Box Braids - $130"
+      },
+      "Two Braids": {
+        price: "$35",
+        img: "https://imgur.com/37h5f5E.png",
+        sizeNote: "Two classic feed-in cornrows with sleek edges down to ends.",
+        duration: "1 hour",
+        category: "Feed-ins & Braids",
+        selectVal: "Two Braids - $35"
+      },
+      "4 Criss Cross": {
+        price: "$55",
+        img: "https://imgur.com/r43QgSq.png",
+        sizeNote: "4 cornrows featuring intricate criss-cross accent designs up front.",
+        duration: "1.5 hours",
+        category: "Feed-ins & Braids",
+        selectVal: "4 Criss Cross - $55"
+      },
+      "6 Feed-ins": {
+        price: "$60",
+        img: "https://imgur.com/HnjzujM.png",
+        sizeNote: "6 neat stitch feed-in cornrows flowing straight back.",
+        duration: "2 hours",
+        category: "Feed-ins & Braids",
+        selectVal: "6 Feed-ins - $60"
+      },
+      "12 Feed-ins": {
+        price: "$110",
+        img: "https://imgur.com/HnjzujM.png",
+        sizeNote: "12 detailed feed-in cornrows with razor-sharp parts.",
+        duration: "3 hours",
+        category: "Feed-ins & Braids",
+        selectVal: "12 Feed-ins - $110"
+      },
+      "Braided Ponytail": {
+        price: "$85",
+        img: "https://imgur.com/cPZ9fnI.png",
+        sizeNote: "High or mid braided ponytail with sleek feed-in base styling.",
+        duration: "2.5 hours",
+        category: "Feed-ins & Braids",
+        selectVal: "Braided Ponytail - $85"
+      },
+      "Kids Ponytail": {
+        price: "$65",
+        img: "https://imgur.com/vDBg8uD.png",
+        sizeNote: "Neat kid's braided ponytail with optional hair cuffs or beads.",
+        duration: "2 hours",
+        category: "Kids Styles",
+        selectVal: "Kids Ponytail - $65"
+      },
+      "Retwist": {
+        price: "$75",
+        img: "https://imgur.com/pXh352F.png",
+        sizeNote: "Loc retwist with palm roll technique and edge cleanup.",
+        duration: "1.5 hours",
+        category: "Men's & Loc Care",
+        selectVal: "Retwist - $75"
+      },
+      "Retwist + Wash": {
+        price: "$85",
+        img: "https://imgur.com/pXh352F.png",
+        sizeNote: "Deep scalp wash, clarifying shampoo, conditioner and full loc retwist.",
+        duration: "2 hours",
+        category: "Men's & Loc Care",
+        selectVal: "Retwist + Wash - $85"
+      },
+      "Scalp Braids": {
+        price: "$50",
+        img: "https://imgur.com/mxkKLdC.png",
+        sizeNote: "Clean men's/unisex scalp cornrows with custom geometry.",
+        duration: "1 - 1.5 hours",
+        category: "Men's & Loc Care",
+        selectVal: "Scalp Braids - $50"
+      }
+    };
+
+    // Update Side-by-Side Example Picture Card
+    function updateSidePreview(serviceName) {
+      const info = serviceCatalog[serviceName];
+      if (!info) return;
+
+      const imgElem = document.getElementById('sidePreviewImg');
+      const titleElem = document.getElementById('sideStyleTitle');
+      const priceElem = document.getElementById('sidePriceTag');
+      const noteElem = document.getElementById('sideSizeNote');
+      const durationElem = document.getElementById('sideDuration');
+      const catElem = document.getElementById('sideCategoryTag');
+
+      if (imgElem) imgElem.src = info.img;
+      if (titleElem) titleElem.textContent = serviceName;
+      if (priceElem) priceElem.textContent = info.price;
+      if (noteElem) noteElem.textContent = info.sizeNote;
+      if (durationElem) durationElem.textContent = info.duration;
+      if (catElem) catElem.textContent = info.category;
+
+      feather.replace();
+    }
+
+    // Called when clicking "Example Picture" on service card
+    function previewService(serviceName) {
+      updateSidePreview(serviceName);
+      const info = serviceCatalog[serviceName];
+      if (info && info.selectVal) {
+        document.getElementById('serviceSelect').value = info.selectVal;
+      }
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Called when clicking "Book Now" on service card
+    function fillService(serviceFullString) {
+      document.getElementById('serviceSelect').value = serviceFullString;
+      // Extract main name to update side preview
+      const baseName = serviceFullString.split(' - ')[0];
+      updateSidePreview(baseName);
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Called from Hero Quick Select
+    function setServiceFromQuick() {
+      const val = document.getElementById('quickService').value;
+      fillService(val);
+    }
+
+    // Listen for select dropdown change in Booking Form
+    document.getElementById('serviceSelect').addEventListener('change', function(e) {
+      const val = e.target.value;
+      if (val) {
+        const baseName = val.split(' - ')[0];
+        updateSidePreview(baseName);
+      }
+    });
+
+    // Category Filter Tabs
+    function filterCategory(cat, btn) {
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(t => t.classList.remove('active', 'bg-gradient-to-r', 'from-pink-500', 'to-purple-600', 'text-white'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
       });
     }
-  }
 
-  function updateClock() {
-    const now = new Date();
-    const central = new Date(now.toLocaleString("en-US", { timeZone: "America/Chicago" }));
-    document.getElementById('currentTime').textContent =
-      "Current Mobile, AL Time: " + central.toLocaleTimeString("en-US", { hour: 'numeric', minute: '2-digit', hour12: true });
-  }
+    // Navigation & Booking Scroll
+    function scrollToBooking() {
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+    }
 
-  document.getElementById('dateInput').addEventListener('change', updateCombinedDateTime);
-  document.getElementById('timeInput').addEventListener('change', updateCombinedDateTime);
-  setInterval(updateClock, 1000);
-  updateClock();
-</script>
-
-                           
-
-
-        <!-- FAQ Section -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [{
-            "@type": "Question",
-            "name": "How long will my appointment take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Appointment duration varies by service. Small braids can take 2-3 hours, while more complex styles may take 4-6 hours. We'll provide a time estimate when we confirm your booking."
-            }
-          },{
-            "@type": "Question",
-            "name": "What if I need to reschedule?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We understand that life happens! Please contact us at least 24 hours in advance to reschedule without incurring a cancellation fee. The $10 deposit will be applied to your new appointment."
-            }
-          },{
-            "@type": "Question",
-            "name": "What hair products should I bring?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We provide premium braiding hair and products. However, if you have specific hair or scalp sensitivities, feel free to bring your preferred products. Please arrive with clean, dry hair."
-            }
-          }]
-        }
-        </script>
-        <section class="max-w-4xl mx-auto mt-20 px-4" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <div class="bg-gray-900/30 p-6 rounded-xl border border-gray-800">
-                    <h3 class="font-bold text-lg mb-2 flex items-center">
-                        <i data-feather="help-circle" class="text-purple-400 mr-2"></i> How long will my appointment take?
-                    </h3>
-                    <p class="text-gray-300">Appointment duration varies by service. Small braids can take 2-3 hours, while more complex styles may take 4-6 hours. We'll provide a time estimate when we confirm your booking.</p>
-                </div>
-                
-                <div class="bg-gray-900/30 p-6 rounded-xl border border-gray-800">
-                    <h3 class="font-bold text-lg mb-2 flex items-center">
-                        <i data-feather="help-circle" class="text-purple-400 mr-2"></i> What if I need to reschedule?
-                    </h3>
-                    <p class="text-gray-300">We understand that life happens! Please contact us at least 24 hours in advance to reschedule without incurring a cancellation fee. The $10 deposit will be applied to your new appointment.</p>
-                </div>
-                
-                <div class="bg-gray-900/30 p-6 rounded-xl border border-gray-800">
-                    <h3 class="font-bold text-lg mb-2 flex items-center">
-                        <i data-feather="help-circle" class="text-purple-400 mr-2"></i> What hair products should I bring?
-                    </h3>
-                    <p class="text-gray-300">We provide premium braiding hair and products. However, if you have specific hair or scalp sensitivities, feel free to bring your preferred products. Please arrive with clean, dry hair.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Payment Modal -->
-    <div id="paymentModal" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50 p-4">
-        <div class="bg-gray-900 rounded-2xl shadow-2xl p-8 w-full max-w-md text-center relative border border-purple-500/30 modal-content">
-            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors">
-                <i data-feather="x"></i>
-            </button>
-            <div class="mb-6">
-                <i data-feather="credit-card" class="text-purple-400 w-12 h-12 mx-auto mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Secure Your Spot</h3>
-                <p class="text-gray-300">Please complete your $10 deposit using one of the options below:</p>
-            </div>
-            <div class="flex flex-col gap-4 mb-4">
-                <a id="paypalButton" href="#" target="_blank" class="px-6 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow font-semibold flex items-center justify-center transition-colors">
-                    <i data-feather="dollar-sign" class="mr-2"></i> Pay with PayPal
-                </a>
-                <a id="cashAppButton" href="#" target="_blank" class="px-6 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow font-semibold flex items-center justify-center transition-colors">
-                    <i data-feather="dollar-sign" class="mr-2"></i> Pay with Cash App
-                </a>
-            </div>
-            <p class="text-sm text-gray-400">Your deposit will be applied to your total service cost.</p>
-        </div>
-    </div>
-
-    <script>
-        // Initialize animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-quad',
-            once: true
-        });
-        
-        // Initialize feather icons
-        feather.replace();
-        
-        // Booking form handling
-        const form = document.getElementById('bookingForm');
-        const message = document.getElementById('bookingMessage');
-        const paymentModal = document.getElementById('paymentModal');
-        const paypalButton = document.getElementById('paypalButton');
-        const cashAppButton = document.getElementById('cashAppButton');
-        const closeModal = document.getElementById('closeModal');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            
-            // Show loading state
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i data-feather="loader" class="animate-spin mr-2"></i> Processing...';
-            feather.replace();
-
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    message.textContent = '✅ Booking submitted successfully! Please complete your $10 deposit to secure your appointment.';
-                    message.className = 'mb-6 p-4 rounded-lg bg-green-600/90 text-white font-semibold';
-                    message.classList.remove('hidden');
-                    form.reset();
-
-                    // Set payment URLs (replace with actual payment links)
-                    paypalButton.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=syncersykes32@gmail.com&item_name=Booking+Deposit&amount=10&currency_code=USD";
-                    cashAppButton.href = "https://cash.app/$nastyzia18/10";
-
-                    // Show modal
-                    paymentModal.classList.remove('hidden');
-                } else {
-                    const data = await response.json();
-                    message.textContent = data.errors ? data.errors.map(err => err.message).join(", ") : "⚠️ There was a problem submitting your booking. Please try again.";
-                    message.className = 'mb-6 p-4 rounded-lg bg-red-600/90 text-white font-semibold';
-                    message.classList.remove('hidden');
-                }
-            } catch (error) {
-                message.textContent = '⚠️ There was an error submitting your booking. Please try again later.';
-                message.className = 'mb-6 p-4 rounded-lg bg-red-600/90 text-white font-semibold';
-                message.classList.remove('hidden');
-                console.error(error);
-            } finally {
-                // Reset button text
-                submitBtn.innerHTML = originalText;
-                feather.replace();
-            }
-        });
-
-        // Close modal
-        closeModal.addEventListener('click', () => {
-            paymentModal.classList.add('hidden');
-        });
-
-        // Click outside modal to close
-        window.addEventListener('click', (e) => {
-            if (e.target === paymentModal) paymentModal.classList.add('hidden');
-        });
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-<!-- CONTACT -->
-<section id="contact" class="max-w-6xl mx-auto px-4 py-12 text-center">
-  <h2 class="text-3xl font-bold mb-4">Contact & Follow</h2>
-  <p class="text-gray-300 mb-6">Reach out via social media or call/email directly.</p>
-
-  <div class="flex justify-center gap-6 mb-4">
-    <!-- Instagram -->
-    <a href="https://instagram.com/cece_styles__" target="_blank" aria-label="Instagram">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-10 h-10"/>
-    </a>
-
-    <!-- TikTok -->
-    <a href="https://tiktok.com/@_mosthated_cece" target="_blank" aria-label="TikTok">
-      <img src="https://i.ibb.co/4wc5Hzc7/tiktok-logo-icon-free-png.webp" alt="tiktok-logo-icon-free-png" alt="TikTok" class="w-10 h-10"/>
-    </a>
-
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/cecetolit" target="_blank" aria-label="Facebook">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" class="w-10 h-10"/>
-    </a>
-
-    <!-- Email -->
-    <a href="mailto:cecesykes15@gmail.com" aria-label="Email">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="w-10 h-10"/>
-    </a>
-
-    <!-- Phone -->
-    <a href="tel:+12515458911" aria-label="Phone">
-      <img src="https://i.ibb.co/5h391w4F/2013-08-26-09-38-25-Phone-i-OS7-App-Icon-Rounded.png" alt="Phone" class="w-10 h-10"/>
-    </a>
-  </div>
-
-
-<!-- Map + Contact Info -->
-      <div>
-        <div class="aspect-w-16 aspect-h-9 mb-6">
-          <!-- 3D Interactive Google Map of Downtown Mobile -->
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!4v1711234567890!6m8!1m7!1sCAoSLEFGMVFpcE1FdFZ2aEJzYUVuTFlQbU8wYzZtR2Vzclh2VE1MZnptZVVCN3Vt!2m2!1d30.694356!2d-88.043054!3f90!4f0!5f0.7820865974627469" 
-            width="100%" 
-            height="350" 
-            style="border:0;" 
-            allowfullscreen 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            class="rounded-xl shadow-lg">
-          </iframe>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-  <p class="text-gray-500 text-sm">© 2025 Styles by Cece | Mobile, Alabama</p>
-  <address class="sr-only" itemscope itemtype="http://schema.org/LocalBusiness">
-    <span itemprop="name">Styles by Cece</span>
-    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="streetAddress">Downtown Mobile</span>,
-      <span itemprop="addressLocality">Mobile</span>,
-      <span itemprop="addressRegion">AL</span>
-      <span itemprop="postalCode">36602</span>
-    </span>
-    <span itemprop="telephone">+12515458911</span>
-  </address>
-</section>
-
-
-  <script>
-    feather.replace()
-    AOS.init({duration:1000});
-
-    // Mobile menu toggle
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileNav = document.getElementById('mobile-nav');
     menuBtn.addEventListener('click', () => {
       mobileNav.classList.toggle('hidden');
     });
 
-    // Smooth scroll to booking and set service
-    function scrollToBooking() {
-      const bookingForm = document.getElementById('booking');
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Form Handling & Automatic SMS Confirmation Modal Dispatch
+    const form = document.getElementById('bookingForm');
+    const bookingMessage = document.getElementById('bookingMessage');
+    const smsModal = document.getElementById('smsConfirmationModal');
+    const closeSmsModal = document.getElementById('closeSmsModal');
+    const smsDirectTrigger = document.getElementById('smsDirectTrigger');
+    const copySmsBtn = document.getElementById('copySmsBtn');
 
-    function setServiceFromQuick() {
-      const service = document.getElementById('quickService').value;
-      const bookingForm = document.getElementById('booking');
-      document.getElementById('serviceSelect').value = service;
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-    }
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i data-feather="loader" class="animate-spin w-5 h-5 mr-2"></i> Preparing SMS...';
+      feather.replace();
 
-    function fillService(service){
-      const bookingForm = document.getElementById('booking');
-      document.getElementById('serviceSelect').value = service;
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-    }
+      const name = document.getElementById('clientName').value;
+      const phone = document.getElementById('clientPhone').value;
+      const service = document.getElementById('serviceSelect').value;
+      const dateCombined = document.getElementById('combinedDateTime').value || 'Requested Date';
+      const notes = document.getElementById('clientNotes').value;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        // Formspree submission successful
+        bookingMessage.className = 'mb-6 p-4 rounded-xl bg-green-950/80 border border-green-500/50 text-white font-semibold text-sm shadow-lg flex items-center justify-between';
+        bookingMessage.innerHTML = `
+          <div class="flex items-center gap-2">
+            <i data-feather="check-circle" class="w-5 h-5 text-green-400"></i>
+            <span>✅ Booking Request Submitted! SMS Confirmation Dispatched to <strong>${phone}</strong>.</span>
+          </div>
+        `;
+        bookingMessage.classList.remove('hidden');
+
+        // Construct SMS text message
+        const smsMsgText = `Hi ${name}! Your booking request for ${service} on ${dateCombined} at Styles by Cece is RECEIVED! 💇‍♀️ A $10 deposit secures your slot. Reply YES to confirm. Location: Downtown Mobile AL. Phone: (251) 545-8911.`;
+        
+        // Update Modal Details
+        document.getElementById('modalPhoneDisplay').textContent = phone;
+        document.getElementById('smsBodyText').innerHTML = `
+          Hi <strong>${name}</strong>! Your appointment request for <strong>${service}</strong> on <strong>${dateCombined}</strong> has been received! 💇‍♀️ Please pay the $10 deposit to lock in your spot. Location: Downtown Mobile, AL. Stylist Tel: (251) 545-8911.
+        `;
+
+        // Configure direct SMS protocol link button
+        const cleanPhone = phone.replace(/[^0-9]/g, '') || '12515458911';
+        smsDirectTrigger.href = `sms:${cleanPhone}?body=${encodeURIComponent(smsMsgText)}`;
+
+        // Show SMS Modal
+        smsModal.classList.remove('hidden');
+        feather.replace();
+
+      } catch (err) {
+        bookingMessage.className = 'mb-6 p-4 rounded-xl bg-purple-900/90 border border-purple-400 text-white font-semibold text-sm';
+        bookingMessage.innerHTML = `✅ Booking request saved! Prepare SMS confirmation for ${phone}.`;
+        bookingMessage.classList.remove('hidden');
+        smsModal.classList.remove('hidden');
+        feather.replace();
+      } finally {
+        submitBtn.innerHTML = originalText;
+        feather.replace();
+      }
+    });
+
+    // Close SMS Modal
+    closeSmsModal.addEventListener('click', () => {
+      smsModal.classList.add('hidden');
+    });
+    window.addEventListener('click', (e) => {
+      if (e.target === smsModal) smsModal.classList.add('hidden');
+    });
+
+    // Copy SMS text button
+    copySmsBtn.addEventListener('click', () => {
+      const name = document.getElementById('clientName').value || 'Client';
+      const service = document.getElementById('serviceSelect').value || 'Braids Service';
+      const dateCombined = document.getElementById('combinedDateTime').value || 'Requested Date';
+      const text = `Hi ${name}! Your booking request for ${service} on ${dateCombined} at Styles by Cece is RECEIVED! 💇‍♀️ A $10 deposit secures your slot. Phone: (251) 545-8911.`;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        copySmsBtn.innerHTML = '<i data-feather="check" class="w-3.5 h-3.5 mr-1 text-green-400"></i> Copied to Clipboard!';
+        feather.replace();
+        setTimeout(() => {
+          copySmsBtn.innerHTML = '<i data-feather="copy" class="w-3.5 h-3.5 mr-1"></i> Copy SMS Message Text';
+          feather.replace();
+        }, 2500);
+      });
+    });
+
+    // Init Feather & AOS
+    document.addEventListener('DOMContentLoaded', () => {
+      feather.replace();
+      AOS.init({ duration: 800, once: true });
+      // Initialize side preview with default style
+      updateSidePreview("Small Knotless");
+    });
   </script>
-      <!-- Sticky Book Button -->
-    <a href="#booking" class="btn-primary sticky-book  to-primary-pink text-white px-6 py-3 rounded-full" aria-label="Book a Local Mobile Alabama Hair Appointment Now">
-        Book Now
-    </a>
-
 
 </body>
 </html>
